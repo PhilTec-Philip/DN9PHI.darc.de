@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TETRA – DN9PHI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="bilder/logo.png" alt="DN9PHI Logo">
+    <div>
+      <h1>DN9PHI <small>Amateurfunk</small></h1>
+    </div>
+  </div>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <div class="dropdown" data-subnav="aktivitaeten">
+      <a href="aktivitaeten.html" class="dropbtn">Aktivitäten</a>
+      <div class="dropdown-content">
+        <a href="sstv.html">SSTV</a>
+        <a href="qsl-cards.html">QSL-Cards</a>
+      </div>
+    </div>
+    <div class="dropdown" data-subnav="tetra">
+      <a href="tetra.html" class="dropbtn active">TETRA</a>
+      <div class="dropdown-content">
+        <a href="tetra.html">Übersicht</a>
+        <a href="tetra-frequenz.html">Frequenzerweiterung</a>
+        <a href="tetra-duplex.html">Duplex-Tables</a>
+      </div>
+    </div>
+    <a href="dmr.html">DMR</a>
+    <a href="logbuch.html">Logbuch</a>
+    <a href="links.html">Links</a>
+    <div class="subnav" id="subnav-aktivitaeten">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="aktivitaeten.html">Übersicht</a>
+      <a href="sstv.html">SSTV</a>
+      <a href="qsl-cards.html">QSL-Cards</a>
+    </div>
+    <div class="subnav" id="subnav-tetra">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="tetra.html">Übersicht</a>
+      <a href="tetra-frequenz.html">Frequenzerweiterung</a>
+      <a href="tetra-duplex.html">Duplex-Tables</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>TETRA – Terrestrial Trunked Radio</h2>
+    <p>
+      TETRA (Terrestrial Trunked Radio) ist ein digitaler Bündelfunkstandard,
+      der ursprünglich für Behörden und Organisationen mit Sicherheitsaufgaben (BOS)
+      entwickelt wurde. Im Amateurfunk wird TETRA zunehmend als Ergänzung zu
+      herkömmlichen Betriebsarten genutzt – insbesondere im 70-cm-Band (435–438 MHz)
+      im TMO-Modus (Trunked Mode Operation).
+    </p>
+  </section>
+
+  <section>
+    <h2>Meine TETRA-Lage</h2>
+    <p>
+      Ich bin im Raum Leverkusen aktiv und habe eine <strong>TETRA-TMO-Verbindung</strong>
+      zu <strong>DO0ATR</strong> in Hürth aufgebaut. Damit bin ich im TETRA-Netz der
+      Region gut angebunden und konnte bereits viele QSOs mit anderen Funkamateuren führen.
+    </p>
+  </section>
+
+  <section>
+    <h2>Mein TETRA-Equipment</h2>
+    <ul class="equipment-list" style="margin-bottom:1rem;">
+      <li><strong>Motorola MTM800E</strong> – Professionelles TETRA-Funkgerät (BOS-Qualität), genutzt im TMO-Modus</li>
+      <li><strong>Motorola MTP850S</strong> – TETRA-Handfunkgerät, portabel für unterwegs</li>
+      <li><strong>Diamond X50</strong> – Antenne für den stationären Betrieb</li>
+    </ul>
+    <p>
+      Beide Motorola-Geräte benötigen eine Anpassung der Frequenztabellen, um im
+      Amateurfunk-Bereich (435–438 MHz) arbeiten zu können. Die entsprechenden
+      Anleitungen dazu findest du in den Unterseiten.
+    </p>
+  </section>
+
+  <section>
+    <h2>Anleitungen & Ressourcen</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h4>Frequenzerweiterung MTP850S / MTM800E</h4>
+        <p style="font-size:0.85rem;color:#6c8eb0;">
+          Schritt-für-Schritt-Anleitung mit CPS-Screenshots, um die Frequenzbereiche
+          der Motorola-Geräte auf den Amateurfunkbereich zu erweitern.
+        </p>
+        <p><a href="tetra-frequenz.html">&rarr; Zur Anleitung</a></p>
+      </div>
+      <div class="card">
+        <h4>Duplex-Tables auf 7,6 MHz einrichten</h4>
+        <p style="font-size:0.85rem;color:#6c8eb0;">
+          Anleitung zum korrekten Einrichten der Duplex-Tabellen (TX/RX-Split 7,6 MHz)
+          in der Motorola CPS, damit der TMO-Betrieb auf den Amateurfunkfrequenzen
+          funktioniert.
+        </p>
+        <p><a href="tetra-duplex.html">&rarr; Zur Anleitung</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>
+    DN9PHI &middot; <a href="https://darc.de/home" target="_blank">DARC e.V.</a> &middot;
+    Ortsverband <a href="https://darc.de/g11/" target="_blank">G11 Leverkusen</a>
+  </p>
+  <p>Diese Seite dient ausschließlich dem nicht-kommerziellen Hobby Amateurfunk.</p>
+</footer>
+
+<div class="lightbox-overlay" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span class="lightbox-nav lightbox-prev" onclick="prevImage()">&#10094;</span>
+  <span class="lightbox-nav lightbox-next" onclick="nextImage()">&#10095;</span>
+  <img class="lightbox-img" id="lightbox-img" alt="">
+  <div class="lightbox-filename" id="lightbox-filename"></div>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DN9PHI &ndash; Amateurfunk aus Leverkusen</title>
+  <title>DMR – DN9PHI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
     <span></span><span></span><span></span>
   </button>
   <nav>
-    <a href="index.html" class="active">Start</a>
+    <a href="index.html">Start</a>
     <a href="ueber-mich.html">Über mich</a>
     <div class="dropdown" data-subnav="aktivitaeten">
       <a href="aktivitaeten.html" class="dropbtn">Aktivitäten</a>
@@ -36,7 +36,7 @@
         <a href="tetra-duplex.html">Duplex-Tables</a>
       </div>
     </div>
-    <a href="dmr.html">DMR</a>
+    <a href="dmr.html" class="active">DMR</a>
     <a href="logbuch.html">Logbuch</a>
     <a href="links.html">Links</a>
     <div class="subnav" id="subnav-aktivitaeten">
@@ -55,39 +55,21 @@
 </header>
 
 <main>
-  <div class="hero">
-    <h2>Willkommen auf der Homepage von</h2>
-    <div class="call">DN9PHI</div>
-    <p class="subtitle">Amateurfunk aus Leverkusen (G11)</p>
-  </div>
-
   <section>
-    <h2>Herzlich willkommen!</h2>
+    <h2>DMR – Digital Mobile Radio</h2>
     <p>
-      Diese private Hobby-Seite dreht sich rund um meine Leidenschaft: den Amateurfunk.
-      Meine Lizenz besitze ich seit dem <strong>18. Juli 2025</strong>, mein erstes
-      Rufzeichen war und ist <strong>DN9PHI</strong>. Ich bin Mitglied im
-      <a href="https://darc.de/home" target="_blank">DARC e.V.</a>, Ortsverband
-      <a href="https://darc.de/g11/" target="_blank">G11 Leverkusen</a>.
-    </p>
-    <p>
-      Aktiv bin ich auf Kurzwelle HF, VHF/UHF sowie im digitalen Bereich.
-      Meine DMR-ID lautet <strong>2635261</strong>.
+      DMR (Digital Mobile Radio) ist ein digitaler Sprach- und Datenfunkstandard,
+      der im Amateurfunk weit verbreitet ist. Hier entsteht in Kürze eine Übersicht
+      zu meiner DMR-Aktivität.
     </p>
   </section>
 
-  <div class="grid-2">
-    <section>
-      <h2>Über mich</h2>
-      <p>Meine Station, mein Equipment und alle Details zu meiner Funklizenz.</p>
-      <p><a href="ueber-mich.html">&rarr; Mehr erfahren</a></p>
-    </section>
-    <section>
-      <h2>Aktivitäten</h2>
-      <p>YOTA Month, Lange Nacht der Technik an der TH Köln, Jugendgruppe am WHG, Notfunkübungen, Mesh und mehr.</p>
-      <p><a href="aktivitaeten.html">&rarr; Zu den Aktivitäten</a></p>
-    </section>
-  </div>
+  <section>
+    <h2>Coming soon …</h2>
+    <p>
+      Diese Seite wird noch mit Inhalten gefüllt.
+    </p>
+  </section>
 </main>
 
 <footer>
@@ -97,6 +79,15 @@
   </p>
   <p>Diese Seite dient ausschließlich dem nicht-kommerziellen Hobby Amateurfunk.</p>
 </footer>
+
+<div class="lightbox-overlay" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span class="lightbox-nav lightbox-prev" onclick="prevImage()">&#10094;</span>
+  <span class="lightbox-nav lightbox-next" onclick="nextImage()">&#10095;</span>
+  <img class="lightbox-img" id="lightbox-img" alt="">
+  <div class="lightbox-filename" id="lightbox-filename"></div>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
 
 <script src="script.js"></script>
 </body>

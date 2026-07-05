@@ -46,13 +46,51 @@ function nextImage() {
 }
 
 function toggleNav() {
-  document.querySelector('header').classList.toggle('nav-open');
+  const header = document.querySelector('header');
+  header.classList.toggle('nav-open');
+  if (!header.classList.contains('nav-open')) hideSubnav();
+}
+
+function showSubnav(id) {
+  const nav = document.querySelector('nav');
+  if (!nav) return;
+  nav.classList.add('showing-subnav');
+  nav.querySelectorAll('.subnav').forEach(s => s.classList.remove('show'));
+  const target = document.getElementById('subnav-' + id);
+  if (target) target.classList.add('show');
+}
+
+function hideSubnav() {
+  document.querySelectorAll('.subnav').forEach(s => {
+    s.classList.add('no-transition');
+    s.classList.remove('show');
+  });
+  const nav = document.querySelector('nav');
+  if (nav) nav.classList.remove('showing-subnav');
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.subnav').forEach(s => s.classList.remove('no-transition'));
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('nav a').forEach(a => {
+  document.querySelectorAll('nav a, .subnav a').forEach(a => {
     a.addEventListener('click', () => {
-      document.querySelector('header').classList.remove('nav-open');
+      if (a.classList.contains('subnav-back')) return;
+      if (!a.classList.contains('dropbtn')) {
+        document.querySelector('header').classList.remove('nav-open');
+        hideSubnav();
+      }
+    });
+  });
+
+  document.querySelectorAll('.dropbtn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      if (window.innerWidth > 768) return;
+      e.preventDefault();
+      const dd = btn.closest('.dropdown');
+      if (!dd) return;
+      const id = dd.dataset.subnav;
+      if (id) showSubnav(id);
     });
   });
 });

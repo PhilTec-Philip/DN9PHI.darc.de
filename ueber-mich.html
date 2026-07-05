@@ -21,11 +21,36 @@
   <nav>
     <a href="index.html">Start</a>
     <a href="ueber-mich.html" class="active">Über mich</a>
-    <a href="aktivitaeten.html">Aktivitäten</a>
-    <a href="sstv.html">SSTV</a>
-    <a href="qsl-cards.html">QSL-Cards</a>
+    <div class="dropdown" data-subnav="aktivitaeten">
+      <a href="aktivitaeten.html" class="dropbtn">Aktivitäten</a>
+      <div class="dropdown-content">
+        <a href="sstv.html">SSTV</a>
+        <a href="qsl-cards.html">QSL-Cards</a>
+      </div>
+    </div>
+    <div class="dropdown" data-subnav="tetra">
+      <a href="tetra.html" class="dropbtn">TETRA</a>
+      <div class="dropdown-content">
+        <a href="tetra.html">Übersicht</a>
+        <a href="tetra-frequenz.html">Frequenzerweiterung</a>
+        <a href="tetra-duplex.html">Duplex-Tables</a>
+      </div>
+    </div>
+    <a href="dmr.html">DMR</a>
     <a href="logbuch.html">Logbuch</a>
     <a href="links.html">Links</a>
+    <div class="subnav" id="subnav-aktivitaeten">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="aktivitaeten.html">Übersicht</a>
+      <a href="sstv.html">SSTV</a>
+      <a href="qsl-cards.html">QSL-Cards</a>
+    </div>
+    <div class="subnav" id="subnav-tetra">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="tetra.html">Übersicht</a>
+      <a href="tetra-frequenz.html">Frequenzerweiterung</a>
+      <a href="tetra-duplex.html">Duplex-Tables</a>
+    </div>
   </nav>
 </header>
 
@@ -50,6 +75,8 @@
         <h3>VHF / UHF</h3>
         <ul class="equipment-list">
           <li><strong>TYT TH-8600</strong> &ndash; 2-m/70-cm-Dualband-Handfunkgerät</li>
+          <li><strong>AnyTone AT-D878UV II Plus</strong> &ndash; DMR-Handfunkgerät (VHF/UHF)</li>
+          <li><strong>Quansheng UV-K5</strong> &ndash; modifizierbares Triband-Handfunkgerät</li>
           <li><strong>Motorola MTM800E</strong> &ndash; TETRA-Mobilfunkgerät</li>
           <li><strong>Motorola MTP850S</strong> &ndash; TETRA-Handfunkgerät</li>
           <li><strong>Diamond X50</strong> &ndash; Dachantenne</li>
@@ -96,5 +123,6 @@
   <p>Diese Seite dient ausschließlich dem nicht-kommerziellen Hobby Amateurfunk.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

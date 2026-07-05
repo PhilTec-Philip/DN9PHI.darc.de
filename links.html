@@ -21,11 +21,36 @@
   <nav>
     <a href="index.html">Start</a>
     <a href="ueber-mich.html">Über mich</a>
-    <a href="aktivitaeten.html">Aktivitäten</a>
-    <a href="sstv.html">SSTV</a>
-    <a href="qsl-cards.html">QSL-Cards</a>
+    <div class="dropdown" data-subnav="aktivitaeten">
+      <a href="aktivitaeten.html" class="dropbtn">Aktivitäten</a>
+      <div class="dropdown-content">
+        <a href="sstv.html">SSTV</a>
+        <a href="qsl-cards.html">QSL-Cards</a>
+      </div>
+    </div>
+    <div class="dropdown" data-subnav="tetra">
+      <a href="tetra.html" class="dropbtn">TETRA</a>
+      <div class="dropdown-content">
+        <a href="tetra.html">Übersicht</a>
+        <a href="tetra-frequenz.html">Frequenzerweiterung</a>
+        <a href="tetra-duplex.html">Duplex-Tables</a>
+      </div>
+    </div>
+    <a href="dmr.html">DMR</a>
     <a href="logbuch.html">Logbuch</a>
     <a href="links.html" class="active">Links</a>
+    <div class="subnav" id="subnav-aktivitaeten">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="aktivitaeten.html">Übersicht</a>
+      <a href="sstv.html">SSTV</a>
+      <a href="qsl-cards.html">QSL-Cards</a>
+    </div>
+    <div class="subnav" id="subnav-tetra">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="tetra.html">Übersicht</a>
+      <a href="tetra-frequenz.html">Frequenzerweiterung</a>
+      <a href="tetra-duplex.html">Duplex-Tables</a>
+    </div>
   </nav>
 </header>
 
@@ -74,6 +99,8 @@
         <li><a href="https://www.wimo.com/de/xiegu-g90" target="_blank">Xiegu G90 &ndash; WIMO</a></li>
         <li><a href="https://www.amazon.com/144-148MHz-420-450MHz-Transceiver-Waterproof-Programming/dp/B08X11CX2S" target="_blank">TYT TH-8600 &ndash; Amazon</a></li>
         <li><a href="https://www.motorolasolutions.com/en_xu/products/tetra/devices/discontinued/mtm800-enhanced.html" target="_blank">Motorola MTM800E &ndash; Informationen</a></li>
+        <li><a href="https://www.wimo.com/de/at-d878uv2b3" target="_blank">AnyTone AT-D878UV II Plus &ndash; WIMO</a></li>
+        <li><a href="https://www.amazon.de/UV-K5-Reichweite-Wiederaufladbare-Handfunkger%C3%A4t-Erwachsene/dp/B0D41HZC85" target="_blank">Quansheng UV-K5 &ndash; Amazon</a></li>
         <li><a href="https://www.wimo.com/en/eantenna-bazooka-antenna" target="_blank">Double-Bazooka-Antenne &ndash; WIMO</a></li>
       </ul>
     </section>
@@ -88,5 +115,6 @@
   <p>Diese Seite dient ausschließlich dem nicht-kommerziellen Hobby Amateurfunk.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

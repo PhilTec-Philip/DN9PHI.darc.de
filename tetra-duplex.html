@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DN9PHI &ndash; Amateurfunk aus Leverkusen</title>
+  <title>Duplex-Tables 7,6 MHz – DN9PHI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
     <span></span><span></span><span></span>
   </button>
   <nav>
-    <a href="index.html" class="active">Start</a>
+    <a href="index.html">Start</a>
     <a href="ueber-mich.html">Über mich</a>
     <div class="dropdown" data-subnav="aktivitaeten">
       <a href="aktivitaeten.html" class="dropbtn">Aktivitäten</a>
@@ -33,7 +33,7 @@
       <div class="dropdown-content">
         <a href="tetra.html">Übersicht</a>
         <a href="tetra-frequenz.html">Frequenzerweiterung</a>
-        <a href="tetra-duplex.html">Duplex-Tables</a>
+        <a href="tetra-duplex.html" class="active">Duplex-Tables</a>
       </div>
     </div>
     <a href="dmr.html">DMR</a>
@@ -49,45 +49,31 @@
       <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
       <a href="tetra.html">Übersicht</a>
       <a href="tetra-frequenz.html">Frequenzerweiterung</a>
-      <a href="tetra-duplex.html">Duplex-Tables</a>
+      <a href="tetra-duplex.html" class="active">Duplex-Tables</a>
     </div>
   </nav>
 </header>
 
 <main>
-  <div class="hero">
-    <h2>Willkommen auf der Homepage von</h2>
-    <div class="call">DN9PHI</div>
-    <p class="subtitle">Amateurfunk aus Leverkusen (G11)</p>
-  </div>
-
   <section>
-    <h2>Herzlich willkommen!</h2>
+    <h2>Duplex-Tables auf 7,6 MHz einrichten</h2>
     <p>
-      Diese private Hobby-Seite dreht sich rund um meine Leidenschaft: den Amateurfunk.
-      Meine Lizenz besitze ich seit dem <strong>18. Juli 2025</strong>, mein erstes
-      Rufzeichen war und ist <strong>DN9PHI</strong>. Ich bin Mitglied im
-      <a href="https://darc.de/home" target="_blank">DARC e.V.</a>, Ortsverband
-      <a href="https://darc.de/g11/" target="_blank">G11 Leverkusen</a>.
-    </p>
-    <p>
-      Aktiv bin ich auf Kurzwelle HF, VHF/UHF sowie im digitalen Bereich.
-      Meine DMR-ID lautet <strong>2635261</strong>.
+      Für den TMO-Betrieb auf den Amateurfunkfrequenzen müssen die Duplex-Tabellen
+      in der Motorola CPS korrekt konfiguriert werden. Der standardmäßige TX/RX-Split
+      beträgt 7,6 MHz – diese Einstellung muss in den Band- und Kanalparametern
+      hinterlegt werden.
     </p>
   </section>
 
-  <div class="grid-2">
-    <section>
-      <h2>Über mich</h2>
-      <p>Meine Station, mein Equipment und alle Details zu meiner Funklizenz.</p>
-      <p><a href="ueber-mich.html">&rarr; Mehr erfahren</a></p>
-    </section>
-    <section>
-      <h2>Aktivitäten</h2>
-      <p>YOTA Month, Lange Nacht der Technik an der TH Köln, Jugendgruppe am WHG, Notfunkübungen, Mesh und mehr.</p>
-      <p><a href="aktivitaeten.html">&rarr; Zu den Aktivitäten</a></p>
-    </section>
-  </div>
+  <section>
+    <h2>Anleitung – in Arbeit</h2>
+    <p>
+      Diese Anleitung wird noch erstellt. Sobald ich die CPS-Screenshots
+      zusammengestellt habe, folgt hier eine ausführliche Beschreibung mit
+      Bildern für jeden Schritt.
+    </p>
+    <p style="font-size:0.85rem;color:#6c8eb0;">Letzte Aktualisierung: Juli 2026</p>
+  </section>
 </main>
 
 <footer>
@@ -97,6 +83,15 @@
   </p>
   <p>Diese Seite dient ausschließlich dem nicht-kommerziellen Hobby Amateurfunk.</p>
 </footer>
+
+<div class="lightbox-overlay" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span class="lightbox-nav lightbox-prev" onclick="prevImage()">&#10094;</span>
+  <span class="lightbox-nav lightbox-next" onclick="nextImage()">&#10095;</span>
+  <img class="lightbox-img" id="lightbox-img" alt="">
+  <div class="lightbox-filename" id="lightbox-filename"></div>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
 
 <script src="script.js"></script>
 </body>
