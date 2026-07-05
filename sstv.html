@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSTV &ndash; DN9PHI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="bilder/logo.png" alt="DN9PHI Logo">
+    <div>
+      <h1>DN9PHI <small>Amateurfunk</small></h1>
+    </div>
+  </div>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="aktivitaeten.html">Aktivitäten</a>
+    <a href="sstv.html" class="active">SSTV</a>
+    <a href="qsl-cards.html">QSL-Cards</a>
+    <a href="logbuch.html">Logbuch</a>
+    <a href="links.html">Links</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>SSTV-Empfänge</h2>
+    <p>
+      SSTV (Slow Scan Television) ermöglicht die Übertragung von Standbildern
+      über Funk. Hier dokumentiere ich meine erfolgreichen Empfänge von der
+      Internationalen Raumstation (ISS) sowie von Amateurfunk-Wetterballonen.
+    </p>
+  </section>
+
+  <section>
+    <h2>World Space Week &ndash; Oktober 2025</h2>
+    <p>
+      Empfangene SSTV-Bilder von der ISS während eines Aktivzeitraums im
+      Oktober 2025. Die Bilder wurden mit einem Handfunkgerät und entsprechender
+      Software dekodiert.
+    </p>
+
+    <div class="sstv-gallery">
+      <div class="card">
+        <img src="bilder/iss/ISS4-12.png" alt="ISS SSTV Bild 4 von 12">
+        <h4>ISS SSTV Bild 4 von 12</h4>
+        <audio controls preload="none" src="sstv/iss/ISS4-12.wav"></audio>
+      </div>
+      <div class="card">
+        <img src="bilder/iss/ISS5-12.png" alt="ISS SSTV Bild 5 von 12">
+        <h4>ISS SSTV Bild 5 von 12</h4>
+        <audio controls preload="none" src="sstv/iss/ISS5-12.wav"></audio>
+      </div>
+      <div class="card">
+        <img src="bilder/iss/ISS6-12.png" alt="ISS SSTV Bild 6 von 12">
+        <h4>ISS SSTV Bild 6 von 12</h4>
+        <audio controls preload="none" src="sstv/iss/ISS6-12.wav"></audio>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Wetterballon SSTV &ndash; September 2025</h2>
+    <p>
+      Im September 2025 habe ich SSTV-Bilder von einem Amateurfunk-Wetterballon
+      empfangen. Die Bilder wurden während des Fluges in der Stratosphäre
+      aufgenommen und per Funk zur Erde gesendet. <br>
+      Weitere Infos zu Amateurfunk-Wetterballons und deren SSTV-Übertragungen findest du auf <a href="https://www.g-fliegt.de/" target="_blank">G-Fliegt</a>.
+    </p>
+
+    <div class="sstv-gallery">
+      <div class="card">
+        <img src="bilder/ballon/009.png" alt="Ballon SSTV 1">
+        <h4>#009</h4>
+      </div>
+      <div class="card">
+        <img src="bilder/ballon/048.png" alt="Ballon SSTV 36">
+        <h4>#048</h4>
+      </div>
+      <div class="card">
+        <img src="bilder/ballon/049.png" alt="Ballon SSTV 37">
+        <h4>#049</h4>
+      </div>
+      <div class="card">
+        <img src="bilder/ballon/050.png" alt="Ballon SSTV 38">
+        <h4>#050</h4>
+      </div>
+      <div class="card">
+        <img src="bilder/ballon/051.png" alt="Ballon SSTV 39">
+        <h4>#051</h4>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>
+    DN9PHI &middot; <a href="https://darc.de/" target="_blank">DARC e.V.</a> &middot;
+    Ortsverband <a href="https://darc.de/g11/" target="_blank">G11 Leverkusen</a> &middot;
+    <a href="https://qrz.com/db/DN9PHI" target="_blank">QRZ.com</a> &middot;
+    <a href="https://www.instagram.com/darc_g11/" target="_blank">Instagram @darc_g11</a>
+  </p>
+  <p>Diese Seite dient ausschließlich dem nicht-kommerziellen Hobby Amateurfunk.</p>
+</footer>
+
+<div class="lightbox-overlay" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span class="lightbox-nav lightbox-prev" onclick="prevImage()">&#10094;</span>
+  <span class="lightbox-nav lightbox-next" onclick="nextImage()">&#10095;</span>
+  <img class="lightbox-img" id="lightbox-img" alt="">
+  <div class="lightbox-filename" id="lightbox-filename"></div>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

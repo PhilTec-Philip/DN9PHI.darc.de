@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QSL-Cards &ndash; DN9PHI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="bilder/logo.png" alt="DN9PHI Logo">
+    <div>
+      <h1>DN9PHI <small>Amateurfunk</small></h1>
+    </div>
+  </div>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="aktivitaeten.html">Aktivitäten</a>
+    <a href="sstv.html">SSTV</a>
+    <a href="qsl-cards.html" class="active">QSL-Cards</a>
+    <a href="logbuch.html">Logbuch</a>
+    <a href="links.html">Links</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Meine eigene QSL-Karte</h2>
+    <p>
+      Meine aktuelle QSL-Karte. Ich freue mich über jeden Kartentausch &ndash; gerne direkt,
+      über das <a href="https://darc.de/geschaeftsstelle/qsl-buero/#c154738" target="_blank">DARC-QSL-Büro</a>
+      oder via OQRS.
+    </p>
+    <div class="grid-2">
+      <div class="card">
+        <img src="bilder/qsl-front.png" alt="QSL-Karte Vorderseite">
+        <h4>Vorderseite</h4>
+      </div>
+      <div class="card">
+        <img src="bilder/qsl-back.png" alt="QSL-Karte Rückseite">
+        <h4>Rückseite</h4>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Empfangene QSL-Karten</h2>
+    <p>Hier eine Auswahl von QSL-Karten, die ich von anderen Funkamateuren erhalten habe.</p>
+
+    <div class="qsl-gallery">
+      <div class="card">
+        <img src="qsl-cards/ba4tvy.jpg" alt="QSL-Karte von BA4TVY">
+        <h4>BA4TVY</h4>
+        <p style="font-size:0.85rem;color:#8ab4f8;">China</p>
+      </div>
+      <div class="card">
+        <img src="qsl-cards/dg1dgt.jpg" alt="QSL-Karte von DG1DGT">
+        <h4>DG1DGT</h4>
+        <p style="font-size:0.85rem;color:#8ab4f8;">Deutschland</p>
+      </div>
+      <div class="card">
+        <img src="qsl-cards/db5ha.jpg" alt="QSL-Karte von DB5HA">
+        <h4>DB5HA</h4>
+        <p style="font-size:0.85rem;color:#8ab4f8;">Deutschland</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>
+    DN9PHI &middot; <a href="https://darc.de/" target="_blank">DARC e.V.</a> &middot;
+    Ortsverband <a href="https://darc.de/g11/" target="_blank">G11 Leverkusen</a> &middot;
+    <a href="https://qrz.com/db/DN9PHI" target="_blank">QRZ.com</a> &middot;
+    <a href="https://www.instagram.com/darc_g11/" target="_blank">Instagram @darc_g11</a>
+  </p>
+  <p>Diese Seite dient ausschließlich dem nicht-kommerziellen Hobby Amateurfunk.</p>
+</footer>
+
+<div class="lightbox-overlay" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span class="lightbox-nav lightbox-prev" onclick="prevImage()">&#10094;</span>
+  <span class="lightbox-nav lightbox-next" onclick="nextImage()">&#10095;</span>
+  <img class="lightbox-img" id="lightbox-img" alt="">
+  <div class="lightbox-filename" id="lightbox-filename"></div>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
