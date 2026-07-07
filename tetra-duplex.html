@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Duplex-Tables 7,6 MHz – DN9PHI</title>
+  <title>Duplex-Tables 7,6 MHz &ndash; DN9PHI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -60,19 +60,120 @@
     <p>
       Für den TMO-Betrieb auf den Amateurfunkfrequenzen müssen die Duplex-Tabellen
       in der Motorola CPS korrekt konfiguriert werden. Der standardmäßige TX/RX-Split
-      beträgt 7,6 MHz – diese Einstellung muss in den Band- und Kanalparametern
+      beträgt 7,6 MHz &ndash; diese Einstellung muss in den Band- und Kanalparametern
       hinterlegt werden.
+    </p>
+    <p>
+      Es gibt zwei Wege die Einstellung vorzunehmen:
+      <a href="#methode1"><strong>Methode 1</strong></a> (über „Mobility and System
+      Parameters&ldquo;) ist einfacher und sollte bevorzugt werden. Lassen sich die
+      Parameter dort nicht setzen, verwende
+      <a href="#methode2"><strong>Methode 2</strong></a> (über Lab-Mode und
+      „duplex_space_table&ldquo;).
+    </p>
+    <p style="font-size:0.85rem;color:#6c8eb0;">
+      <strong>Hinweis:</strong> Alle Angaben ohne Gewähr. Keine Haftung für Schäden an
+      den Geräten. Die Erweiterung kann je nach CPS-Version leicht abweichen.
     </p>
   </section>
 
-  <section>
-    <h2>Anleitung – in Arbeit</h2>
-    <p>
-      Diese Anleitung wird noch erstellt. Sobald ich die CPS-Screenshots
-      zusammengestellt habe, folgt hier eine ausführliche Beschreibung mit
-      Bildern für jeden Schritt.
-    </p>
-    <p style="font-size:0.85rem;color:#6c8eb0;">Letzte Aktualisierung: Juli 2026</p>
+  <section id="methode1">
+    <h2>Methode 1 &ndash; Über „Mobility and System Parameters&ldquo;</h2>
+    <ol class="guide-steps">
+      <li>
+        <strong>Codeplug öffnen</strong> &ndash; CPS starten und den vorhandenen Codeplug
+        laden oder aus dem Gerät auslesen.
+        <img src="bilder/duplex_table_change1/step1.png" alt="Codeplug geöffnet"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Block „Mobility and System Parameters&ldquo; finden</strong> &ndash; In der
+        Baumstruktur nach diesem Block suchen und erweitern.
+        <img src="bilder/duplex_table_change1/step2.png" alt="Mobility and System Parameters"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Block „Mobility Parameters&ldquo; öffnen</strong> &ndash; Unter dem
+        vorherigen Block den Parameter-Block aufklappen.
+        <img src="bilder/duplex_table_change1/step3.png" alt="Mobility Parameters"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Bis zu Zeile 28 scrollen</strong> &ndash; Die Tabelle mit den Duplex-Table-
+        Einträgen befindet sich in den unteren Zeilen.
+        <img src="bilder/duplex_table_change1/step4.png" alt="Duplex-Table Einträge"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Table 1 und Table 7 anpassen</strong> &ndash; In den Zeilen für Table 1 und
+        Table 7 den Wert <code>45</code> durch <strong>7,6</strong> ersetzen.
+        <img src="bilder/duplex_table_change1/step7.png" alt="Wert auf 7,6 geändert"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Write Entire Codeplug</strong> &ndash; Den vollständigen Codeplug ins Gerät
+        schreiben. <em>Write Codeplug</em> reicht nicht &ndash; nur <em>Write Entire
+        Codeplug</em> überträgt die Duplex-Tables.
+        <img src="bilder/duplex_table_change1/step8.png" alt="Write Entire Codeplug"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+    </ol>
+  </section>
+
+  <section id="methode2">
+    <h2>Methode 2 &ndash; Über Lab-Mode und „duplex_space_table&ldquo;</h2>
+    <ol class="guide-steps">
+      <li>
+        <strong>Codeplug öffnen</strong> &ndash; CPS starten und den Codeplug laden.
+        <img src="bilder/duplex_table_change2/step1.png" alt="Codeplug geöffnet"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Lab-Mode öffnen</strong> &ndash; Über <em>View → Lab Mode</em> aktivieren.
+        <img src="bilder/duplex_table_change2/step2.png" alt="Lab-Mode"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Auf Dezimal umschalten</strong> &ndash; Im Lab-Mode die Anzeige auf
+        Dezimal umstellen.
+        <img src="bilder/duplex_table_change2/step3.png" alt="Dezimalansicht"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Block „cp_net_block&ldquo; erweitern</strong> &ndash; In der Baumstruktur
+        aufklappen.
+      </li>
+      <li>
+        <strong>Auf Block „net_data&ldquo; gehen</strong> &ndash; Unter
+        <em>cp_net_block</em> den Block <em>net_data</em> auswählen.
+        <img src="bilder/duplex_table_change2/step5.png" alt="net_data Block"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>„duplex_space_table&ldquo; auswählen und erweitern</strong> &ndash; Unter
+        <em>net_data</em> die Tabelle <em>duplex_space_table</em> aufklappen.
+        <img src="bilder/duplex_table_change2/step6.png" alt="duplex_space_table"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Table 1 und Table 7 anpassen</strong> &ndash; In Table 1 und Table 7
+        den Wert <code>45000000</code> durch <strong>7600000</strong> ersetzen.
+        <img src="bilder/duplex_table_change2/step7.png" alt="Wert auf 7600000 geändert"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Lab-Mode verlassen</strong> &ndash; Über <em>View → Lab Mode</em>
+        deaktivieren. Die Änderungen werden dadurch validiert und gespeichert.
+        <img src="bilder/duplex_table_change2/step8.png" alt="Lab-Mode verlassen"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Write Entire Codeplug</strong> &ndash; Den vollständigen Codeplug ins Gerät
+        schreiben.
+        <img src="bilder/duplex_table_change2/step9.png" alt="Write Entire Codeplug"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+    </ol>
   </section>
 </main>
 

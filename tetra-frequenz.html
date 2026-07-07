@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frequenzerweiterung MTP850S / MTM800E – DN9PHI</title>
+  <title>Frequenzerweiterung MTM800E / MTP850S &ndash; DN9PHI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -56,22 +56,81 @@
 
 <main>
   <section>
-    <h2>Frequenzerweiterung MTP850S / MTM800E</h2>
+    <h2>Frequenzerweiterung MTM800E / MTP850S</h2>
     <p>
-      Um die Motorola-TETRA-Geräte im Amateurfunkband (435–438 MHz) nutzen zu können,
+      Um die Motorola-TETRA-Geräte im Amateurfunkband (435 &ndash; 438 MHz) nutzen zu können,
       muss der Frequenzbereich in der CPS (Customer Programming Software) angepasst
-      werden. Hier folgt eine detaillierte Schritt-für-Schritt-Anleitung.
+      werden. Die folgende Anleitung zeigt die Schritte für die Frequenzerweiterung
+      im Lab-Mode der CPS.
+    </p>
+    <p style="font-size:0.85rem;color:#6c8eb0;">
+      <strong>Hinweis:</strong> Alle Angaben ohne Gewähr. Keine Haftung für Schäden an
+      den Geräten. Die Erweiterung kann je nach CPS-Version leicht abweichen.
     </p>
   </section>
 
   <section>
-    <h2>Anleitung – in Arbeit</h2>
-    <p>
-      Diese Anleitung wird noch erstellt. Sobald ich die CPS-Screenshots
-      zusammengestellt habe, folgt hier eine ausführliche Beschreibung mit
-      Bildern für jeden Schritt.
-    </p>
-    <p style="font-size:0.85rem;color:#6c8eb0;">Letzte Aktualisierung: Juli 2026</p>
+    <h2>Frequenzerweiterung (DMO-/TMO-Range)</h2>
+    <ol class="guide-steps">
+      <li>
+        <strong>Codeplug öffnen</strong> &ndash; CPS starten und den vorhandenen Codeplug
+        laden oder aus dem Gerät auslesen.
+        <img src="bilder/tmo_extension/step1.png" alt="Codeplug in CPS geöffnet"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Lab-Mode öffnen</strong> &ndash; Über das Menü <em>View → Lab Mode</em>
+        oder per Tastenkürzel den Lab-Mode aktivieren.
+        <img src="bilder/tmo_extension/step2.png" alt="Lab-Mode aktivieren"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Auf Dezimal umschalten</strong> &ndash; Im Lab-Mode die Anzeige von
+        Hexadezimal auf Dezimal umstellen.
+        <img src="bilder/tmo_extension/step3.png" alt="Dezimalansicht"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Block „cp_net_block&ldquo; erweitern</strong> &ndash; In der Baumstruktur
+        den Block <em>cp_net_block</em> aufklappen.
+      </li>
+      <li>
+        <strong>Block „net_data&ldquo; erweitern</strong> &ndash; Unter <em>cp_net_block</em>
+        den Block <em>net_data</em> aufklappen.
+      </li>
+      <li>
+        <strong>Block „TMO_range_table[]&ldquo; erweitern</strong> &ndash; Unter
+        <em>net_data</em> den Block <em>TMO_range_table[]</em> aufklappen.
+      </li>
+      <li>
+        <strong>max_rx_freq anpassen</strong> &ndash; Bei jedem der 16 Einträge unter
+        <em>TMO_range_table[]</em> den Wert <code>max_rx_freq</code> von
+        <strong>430000000</strong> auf <strong>440000000</strong> ändern.
+        <img src="bilder/tmo_extension/step7.png" alt="max_rx_freq auf 440000000"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>DMO-Range anpassen</strong> &ndash; Den Block <em>DMO_range</em> aufsuchen
+        und ebenfalls <strong>430000000</strong> durch <strong>440000000</strong>
+        ersetzen.
+        <img src="bilder/tmo_extension/step8.png" alt="DMO_range anpassen"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Lab-Mode verlassen</strong> &ndash; Über <em>View → Lab Mode</em> den
+        Lab-Mode wieder deaktivieren. Dadurch werden die Änderungen validiert und
+        gespeichert.
+        <img src="bilder/tmo_extension/step9.png" alt="Lab-Mode verlassen"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+      <li>
+        <strong>Write Entire Codeplug</strong> &ndash; Den vollständigen Codeplug ins Gerät
+        schreiben. <em>Write Codeplug</em> reicht nicht &ndash; nur <em>Write Entire
+        Codeplug</em> überträgt die Range-Tables.
+        <img src="bilder/tmo_extension/step10.png" alt="Write Entire Codeplug"
+             class="lb-img" style="max-width:400px;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+      </li>
+    </ol>
   </section>
 </main>
 

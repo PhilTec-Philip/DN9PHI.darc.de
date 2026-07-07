@@ -396,6 +396,19 @@ a:hover {
   color: #8ab4f8;
 }
 
+.guide-steps {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.guide-steps li {
+  margin-bottom: 1.5rem;
+}
+
+.guide-steps img {
+  margin-top: 0.5rem;
+}
+
 .equipment-list {
   list-style: none;
 }
