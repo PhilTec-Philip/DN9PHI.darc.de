@@ -16,10 +16,10 @@
       <h1>DN9PHI <small>Amateurfunk</small></h1>
     </div>
   </div>
-  <button class="hamburger" onclick="toggleNav()" aria-label="Menü">
+  <button class="hamburger" onclick="toggleNav()" aria-label="Men&uuml;">
     <span></span><span></span><span></span>
   </button>
-  <nav>
+    <nav>
     <a href="index.html">Start</a>
     <a href="ueber-mich.html">Über mich</a>
     <div class="dropdown" data-subnav="aktivitaeten">
@@ -39,6 +39,13 @@
     </div>
     <a href="dmr.html">DMR</a>
     <a href="logbuch.html" class="active">Logbuch</a>
+    <div class="dropdown" data-subnav="diy">
+      <a href="#" class="dropbtn">DIY</a>
+      <div class="dropdown-content">
+        <a href="blumentopf.html">Blumentopfantenne</a>
+        <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+      </div>
+    </div>
     <a href="links.html">Links</a>
     <div class="subnav" id="subnav-aktivitaeten">
       <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
@@ -52,6 +59,11 @@
       <a href="tetra-frequenz.html">Frequenzerweiterung</a>
       <a href="tetra-duplex.html">Duplex-Tables</a>
     </div>
+    <div class="subnav" id="subnav-diy">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="blumentopf.html">Blumentopfantenne</a>
+      <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+    </div>
   </nav>
 </header>
 
@@ -59,7 +71,7 @@
   <section>
     <h2>Logbuch</h2>
     <p>
-      Meine aktuellen Logbücher sind extern bei folgenden Diensten einsehbar:
+      Meine aktuellen Logb&uuml;cher sind extern bei folgenden Diensten einsehbar:
     </p>
     <ul>
       <li><a href="https://logbook.qrz.com/lbstat/DN9PHI/" target="_blank">QRZ Logbook Statistik</a></li>
@@ -71,7 +83,7 @@
     <h2>Ausbreitungsbedingungen</h2>
     <p>
       Aktuelle Sonnen- und Ausbreitungsdaten (SFI, A-Index, K-Index) &ndash;
-      nützlich um abzuschätzen, ob sich ein Gang ans Funkgerät lohnt:
+      n&uuml;tzlich um abzusch&auml;tzen, ob sich ein Gang ans Funkger&auml;t lohnt:
     </p>
     <p>
       <a href="https://www.hamqsl.com/solar101vhf.php" target="_blank">HamQSL.com &ndash; Solar-Terrestrial Data</a>
@@ -85,16 +97,19 @@
     DN9PHI &middot; <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
     Ortsverband <a href="https://darc.de/g11/" target="_blank">G11 Leverkusen</a>
   </p>
-  <p>Diese Seite dient ausschließlich dem nicht-kommerziellen Hobby Amateurfunk.</p>
+  <p>Diese Seite dient ausschlie&szlig;lich dem nicht-kommerziellen Hobby Amateurfunk.</p>
   <p style="font-size:0.8rem;color:#6c8eb0;">
     Gehostet auf Infrastruktur des
     <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
     <a href="https://www.darc.de/impressum/" target="_blank">Impressum</a>
     &middot;
-    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerklärung</a>
+    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerkl&auml;rung</a>
   </p>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
+
+
+

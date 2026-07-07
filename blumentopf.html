@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2m Blumentopfantenne &ndash; DN9PHI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="bilder/logo.png" alt="DN9PHI Logo">
+    <div>
+      <h1>DN9PHI <small>Amateurfunk</small></h1>
+    </div>
+  </div>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Men&uuml;">
+    <span></span><span></span><span></span>
+  </button>
+    <nav>
+    <a href="index.html">Start</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <div class="dropdown" data-subnav="aktivitaeten">
+      <a href="aktivitaeten.html" class="dropbtn">Aktivitäten</a>
+      <div class="dropdown-content">
+        <a href="sstv.html">SSTV</a>
+        <a href="qsl-cards.html">QSL-Cards</a>
+      </div>
+    </div>
+    <div class="dropdown" data-subnav="tetra">
+      <a href="tetra.html" class="dropbtn">TETRA</a>
+      <div class="dropdown-content">
+        <a href="tetra.html">Übersicht</a>
+        <a href="tetra-frequenz.html">Frequenzerweiterung</a>
+        <a href="tetra-duplex.html">Duplex-Tables</a>
+      </div>
+    </div>
+    <a href="dmr.html">DMR</a>
+    <a href="logbuch.html">Logbuch</a>
+    <div class="dropdown" data-subnav="diy">
+      <a href="#" class="dropbtn active">DIY</a>
+      <div class="dropdown-content">
+        <a href="blumentopf.html" class="active">Blumentopfantenne</a>
+        <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+      </div>
+    </div>
+    <a href="links.html">Links</a>
+    <div class="subnav" id="subnav-aktivitaeten">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="aktivitaeten.html">Übersicht</a>
+      <a href="sstv.html">SSTV</a>
+      <a href="qsl-cards.html">QSL-Cards</a>
+    </div>
+    <div class="subnav" id="subnav-tetra">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="tetra.html">Übersicht</a>
+      <a href="tetra-frequenz.html">Frequenzerweiterung</a>
+      <a href="tetra-duplex.html">Duplex-Tables</a>
+    </div>
+    <div class="subnav" id="subnav-diy">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="blumentopf.html">Blumentopfantenne</a>
+      <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>2m Blumentopfantenne nach VK2ZOI</h2>
+    <p>
+      Die <strong>Half-Wave Flower Pot Antenna</strong> von VK2ZOI
+      ist eine einfache, selbstbaubare 2m-Antenne aus Koaxialkabel und PVC-Rohr.
+      Ich habe sie zusammen mit meinem Vater gebaut &ndash; sie funktioniert hervorragend
+      und kommt ganz ohne Bohrmaschine oder Spezialwerkzeug aus. Hier ist die
+      deutsche Anleitung.
+    </p>
+    <p style="font-size:0.85rem;color:#6c8eb0;">
+      Anleitung &amp; Bilder basieren auf dem Originalartikel von
+      <a href="https://vk2zoi.com/articles/half-wave-flower-pot/" target="_blank">VK2ZOI</a> &ndash; <em>RIP, Wayne (2023)</em>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Grundaufbau</h2>
+    <p>
+      Das Schema zeigt den prinzipiellen Aufbau der 2m-Version. Der Strahler besteht
+      aus dem Innenleiter eines Koaxialkabels, die Mantelwelle wird durch eine
+      angepasste Spule (Choke) am Fu&szlig;punkt unterdr&uuml;ckt.
+    </p>
+    <img src="bilder/blumentopf/flowerpot-1.png" alt="Grundaufbau der 2m-Blumentopfantenne"
+         class="lb-img" style="max-width:550px;width:100%;height:auto;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+  </section>
+
+  <section>
+    <h2>Bauanleitung</h2>
+    <ol class="guide-steps">
+      <li>
+        <strong>Rohr vorbereiten</strong> &ndash; Ein 25 mm graues PVC-Installationsrohr
+        (mindestens 1 m L&auml;nge) besorgen. L&auml;ngeres Rohr gibt mehr Platz unterhalb der
+        Spule zur Befestigung am Antennenmast.
+      </li>
+      <li>
+        <strong>L&ouml;cher f&uuml;r die Spule bohren</strong> &ndash; Zwei L&ouml;cher in das Rohr
+        bohren: Das obere etwa 925 mm vom Ende entfernt (das ist die Strahlerl&auml;nge
+        zuz&uuml;glich etwas Spielraum zur Endkappe). Der Abstand der L&ouml;cher richtet sich
+        nach dem Kabeldurchmesser &ndash; als Richtwert zwei 6-mm-L&ouml;cher im Abstand
+        von 45 mm. Wickel am besten 9 Windungen provisorisch auf und messe nach.
+        <img src="bilder/blumentopf/drilling-angle.jpg" alt="L&ouml;cher schr&auml;g bohren"
+             class="lb-img">
+      </li>
+      <li>
+        <strong>Koaxialkabel vorbereiten</strong> &ndash; Etwa 5&ndash;6 m RG58-Koax
+        (nur mit Geflechtschirm, keine Folie!) nehmen. Von einem Ende 457 mm des
+        AuÃƒÅ¸enmantels und des Schirms abisolieren &ndash; das wird der obere Strahler.
+        Wenn es etwas zu kurz ist, l&auml;sst sich ein St&uuml;ck Draht oder der abisolierte
+        Schirm anl&ouml;ten.
+        <img src="bilder/blumentopf/cut-coax.jpg" alt="Koax-Mantel absetzen"
+             class="lb-img">
+        <img src="bilder/blumentopf/cleanup-coax.jpg" alt="Ges&auml;uberter Koax"
+             class="lb-img">
+        <img src="bilder/blumentopf/top-element.jpg" alt="Oberer Strahler"
+             class="lb-img">
+      </li>
+      <li>
+        <strong>Nylonfaden anbringen</strong> &ndash; Mit ein paar halben Schl&auml;gen
+        einen etwa 50 cm langen Nylonfaden (Fischerschnur) an der Spitze des oberen
+        Strahlers befestigen. Damit wird der Strahler sp&auml;ter gespannt und unter der
+        Endkappe fixiert.
+        <img src="bilder/blumentopf/fishing-line.jpg" alt="Nylonfaden am Strahler"
+             class="lb-img">
+      </li>
+      <li>
+        <strong>Markierung setzen</strong> &ndash; 447 mm unterhalb des Speisepunkts
+        (dort, wo der Schirm beginnt) eine Markierung auf dem Kabel anbringen (Klebeband,
+        Farbe o.&thinsp;Ãƒ„.). Das ist der sp&auml;tere Anschlag, an dem das Kabel im Rohr
+        verschwindet.
+        <img src="bilder/blumentopf/bottom.jpg" alt="Markierung am Koax"
+             class="lb-img">
+      </li>
+      <li>
+        <strong>Kabel in das Rohr einf&uuml;hren</strong> &ndash; Den Strahler mitsamt
+        Nylonfaden von oben durch das obere Spulenloch stecken und so weit
+        hineinschieben, bis die Markierung im Loch verschwindet.
+        <img src="bilder/blumentopf/feed-coax.jpg" alt="Kabel in Rohr einf&uuml;hren"
+             class="lb-img">
+      </li>
+      <li>
+        <strong>Strahler spannen</strong> &ndash; Den Nylonfaden oben herausziehen
+        und den Strahler damit vorsichtig straff ziehen. Der Knick am oberen Spulenloch
+        legt sich so gerade.
+        <img src="bilder/blumentopf/fishing.jpg" alt="Nylonfaden herausangeln"
+             class="lb-img">
+      </li>
+      <li>
+        <strong>Spule wickeln</strong> &ndash; Das Kabel von auÃƒÅ¸en um das Rohr wickeln
+        (9 Windungen) und dann durch das untere Loch wieder nach innen f&uuml;hren. Mit
+        Gef&uuml;hl nachhelfen, bis die Spule fest sitzt. Dabei darauf achten, dass die
+        Markierung weiterhin durch das obere Loch sichtbar bleibt.
+        <img src="bilder/blumentopf/coil.jpg" alt="Gewickelte Spule"
+             class="lb-img">
+      </li>
+      <li>
+        <strong>Endkappe vorbereiten</strong> &ndash; Oben am Rohr eine schmale Kerbe
+        eins&auml;gen, den Nylonfaden straff einlegen und sp&auml;ter mit der Endkappe
+        festklemmen. So bleibt der Strahler dauerhaft gerade gespannt.
+      </li>
+      <li>
+        <strong>Stecker montieren und SWR messen</strong> &ndash; Einen PL-Stecker
+        anl&ouml;ten und das SWR messen. Bei Bedarf den oberen Strahler etwas k&uuml;rzen &
+        in der Regel ist aber kaum Nachtrimmen n&ouml;tig.
+        <img src="bilder/blumentopf/vswr.jpg" alt="SWR messen" class="lb-img">
+      </li>
+    </ol>
+
+    <p>
+      Das SWR-Diagramm der fertigen 2m-Antenne sollte in etwa so aussehen:
+    </p>
+    <img src="bilder/blumentopf/flowerplot-1.png" alt="SWR-Verlauf 2m"
+         class="lb-img" style="max-width:300px;width:100%;height:auto;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+
+    <p>
+      <strong>Wichtig:</strong> Das untere Rohrende offen lassen, damit
+      Kondenswasser ablaufen kann. Nicht verschlieÃƒÅ¸en oder abdichten!
+    </p>
+  </section>
+
+  <section>
+    <h2>Tipps</h2>
+    <ul>
+      <li>
+        Die Kanten der Spulenl&ouml;cher mit einer Feile entgraten &ndash; das schont
+        das Kabel und erleichtert das Wickeln.
+        <img src="bilder/blumentopf/filing-coil.jpg" alt="L&ouml;cher entgraten" class="lb-img">
+        <img src="bilder/blumentopf/coil-holes-2.jpg" alt="Entgratete L&ouml;cher" class="lb-img">
+      </li>
+      <li>
+        Den Speisepunkt und die Ein-/Austrittspunkte der Spule mit Schrumpfschlauch
+        gegen Feuchtigkeit sch&uuml;tzen.
+        <img src="bilder/blumentopf/heatshrink-cable.jpg" alt="Speisepunkt mit Schrumpfschlauch" class="lb-img">
+      </li>
+      <li>
+        Auch das untere Ende des Rohrs mit Schrumpfschlauch einfassen &ndash; das
+        sch&uuml;tzt das austretende Kabel und sieht sauber aus.
+        <img src="bilder/blumentopf/heatshrink-base.jpg" alt="Unteres Ende mit Schrumpfschlauch" class="lb-img">
+      </li>
+      <li>
+        <strong>Nur Koax mit Geflechtschirm verwenden.</strong> Folien-Schirm bricht
+        an den engen Biegestellen der Spule &ndash; die Antenne funktioniert dann
+        nicht.
+      </li>
+      <li>
+        <strong>Vogelschutz:</strong> Die Spule kann von V&ouml;geln (z.&thinsp;B.
+        Kakadus) attackiert werden. Eine leere Silikonkartusche oder eine
+        PET-Flasche (mit HeiÃƒÅ¸luft aufgezogen) sch&uuml;tzt die Spule. Vorher die Spule
+        mit PVC-Klebeband umwickeln, um Wasser abzuhalten.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Anmerkung zum Rohrmaterial</h2>
+    <p>
+      Graues PVC-Installationsrohr ist zwar nicht das dielektrisch verlust&auml;rmste
+      Material, aber sehr UV-best&auml;ndig. Die Bauform gleicht den Einfluss des Rohrs
+      durch rund 2 % k&uuml;rzere Elemente aus. Wer Orangenes (HD-)Rohr,
+      Bew&auml;sserungsrohr oder Glasfaser verwendet, muss die L&auml;ngen entsprechend
+      anpassen.
+    </p>
+  </section>
+
+  <section>
+    <h2>Skalierung auf andere Frequenzen</h2>
+    <p>
+      Der Aufbau l&auml;sst sich auf andere Frequenzen &uuml;bertragen. Die Tabelle zeigt die
+      Eigenresonanz der Choke-Spule aus RG58 auf verschiedenen Rohrdurchmessern:
+    </p>
+    <table class="data-table">
+      <tr>
+        <th rowspan="2">Windungen</th>
+        <th colspan="3">Rohr-AuÃƒÅ¸endurchmesser</th>
+      </tr>
+      <tr>
+        <th>25 mm</th>
+        <th>32 mm</th>
+        <th>50 mm</th>
+      </tr>
+      <tr><td>4</td><td>&ndash;</td><td>160</td><td>&ndash;</td></tr>
+      <tr><td>5</td><td>150</td><td>136</td><td>85</td></tr>
+      <tr><td>8</td><td>142</td><td>106</td><td>65</td></tr>
+      <tr><td>9</td><td>135</td><td>100</td><td>60</td></tr>
+      <tr><td>10</td><td>129</td><td>95</td><td>57</td></tr>
+      <tr><td>12</td><td>117</td><td>84</td><td>52</td></tr>
+      <tr><td>15</td><td>105</td><td>75</td><td>47</td></tr>
+    </table>
+    <p style="font-size:0.85rem;color:#6c8eb0;">
+      Frequenzen in MHz. Die Spule sollte etwa 5&ndash;6 % unterhalb der gew&uuml;nschten
+      Betriebsfrequenz resonant sein.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    DN9PHI &middot; <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
+    Ortsverband <a href="https://darc.de/g11/" target="_blank">G11 Leverkusen</a>
+  </p>
+  <p>Diese Seite dient ausschlie&szlig;lich dem nicht-kommerziellen Hobby Amateurfunk.</p>
+  <p style="font-size:0.8rem;color:#6c8eb0;">
+    Gehostet auf Infrastruktur des
+    <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
+    <a href="https://www.darc.de/impressum/" target="_blank">Impressum</a>
+    &middot;
+    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerkl&auml;rung</a>
+  </p>
+</footer>
+
+<div class="lightbox-overlay" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span class="lightbox-nav lightbox-prev" onclick="prevImage()">&#10094;</span>
+  <span class="lightbox-nav lightbox-next" onclick="nextImage()">&#10095;</span>
+  <img class="lightbox-img" id="lightbox-img" alt="">
+  <div class="lightbox-filename" id="lightbox-filename"></div>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+

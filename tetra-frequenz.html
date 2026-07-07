@@ -15,10 +15,10 @@
       <h1>DN9PHI <small>Amateurfunk</small></h1>
     </div>
   </div>
-  <button class="hamburger" onclick="toggleNav()" aria-label="Menü">
+  <button class="hamburger" onclick="toggleNav()" aria-label="Men&uuml;">
     <span></span><span></span><span></span>
   </button>
-  <nav>
+    <nav>
     <a href="index.html">Start</a>
     <a href="ueber-mich.html">Über mich</a>
     <div class="dropdown" data-subnav="aktivitaeten">
@@ -29,15 +29,22 @@
       </div>
     </div>
     <div class="dropdown" data-subnav="tetra">
-      <a href="tetra.html" class="dropbtn">TETRA</a>
+      <a href="tetra.html" class="dropbtn active">TETRA</a>
       <div class="dropdown-content">
         <a href="tetra.html">Übersicht</a>
-        <a href="tetra-frequenz.html" class="active">Frequenzerweiterung</a>
+        <a href="tetra-frequenz.html">Frequenzerweiterung</a>
         <a href="tetra-duplex.html">Duplex-Tables</a>
       </div>
     </div>
     <a href="dmr.html">DMR</a>
     <a href="logbuch.html">Logbuch</a>
+    <div class="dropdown" data-subnav="diy">
+      <a href="#" class="dropbtn">DIY</a>
+      <div class="dropdown-content">
+        <a href="blumentopf.html">Blumentopfantenne</a>
+        <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+      </div>
+    </div>
     <a href="links.html">Links</a>
     <div class="subnav" id="subnav-aktivitaeten">
       <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
@@ -48,8 +55,13 @@
     <div class="subnav" id="subnav-tetra">
       <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
       <a href="tetra.html">Übersicht</a>
-      <a href="tetra-frequenz.html" class="active">Frequenzerweiterung</a>
+      <a href="tetra-frequenz.html">Frequenzerweiterung</a>
       <a href="tetra-duplex.html">Duplex-Tables</a>
+    </div>
+    <div class="subnav" id="subnav-diy">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="blumentopf.html">Blumentopfantenne</a>
+      <a href="programmierkabel.html">Programmierkabel MTM800E</a>
     </div>
   </nav>
 </header>
@@ -58,14 +70,14 @@
   <section>
     <h2>Frequenzerweiterung</h2>
     <p>
-      Um die Motorola-TETRA-Geräte im Amateurfunkband (435 &ndash; 438 MHz) nutzen zu können,
+      Um die Motorola-TETRA-Ger&auml;te im Amateurfunkband (435 &ndash; 438 MHz) nutzen zu k&ouml;nnen,
       muss der Frequenzbereich in der CPS (Customer Programming Software) angepasst
-      werden. Die folgende Anleitung zeigt die Schritte für die Frequenzerweiterung
+      werden. Die folgende Anleitung zeigt die Schritte f&uuml;r die Frequenzerweiterung
       im Lab-Mode der CPS. Getestet wurde dies mit einem Motorola MTM800E und einem MTP850S.
     </p>
     <p style="font-size:0.85rem;color:#6c8eb0;">
-      <strong>Hinweis:</strong> Alle Angaben ohne Gewähr. Keine Haftung für Schäden an
-      den Geräten. Die Erweiterung kann je nach CPS-Version leicht abweichen.
+      <strong>Hinweis:</strong> Alle Angaben ohne Gew&auml;hr. Keine Haftung f&uuml;r Sch&auml;den an
+      den Ger&auml;ten. Die Erweiterung kann je nach CPS-Version leicht abweichen.
     </p>
   </section>
 
@@ -73,14 +85,14 @@
     <h2>Frequenzerweiterung (DMO-/TMO-Range)</h2>
     <ol class="guide-steps">
       <li>
-        <strong>Codeplug öffnen</strong> &ndash; CPS starten und den vorhandenen Codeplug
-        laden oder aus dem Gerät auslesen.
-        <img src="bilder/tmo_extension/step1.png" alt="Codeplug in CPS geöffnet"
+        <strong>Codeplug &ouml;ffnen</strong> &ndash; CPS starten und den vorhandenen Codeplug
+        laden oder aus dem Ger&auml;t auslesen.
+        <img src="bilder/tmo_extension/step1.png" alt="Codeplug in CPS ge&ouml;ffnet"
              class="lb-img"
       </li>
       <li>
-        <strong>Lab-Mode öffnen</strong> &ndash; Über das Menü <em>View → Lab Mode</em>
-        oder per Tastenkürzel den Lab-Mode aktivieren.
+        <strong>Lab-Mode &ouml;ffnen</strong> &ndash; ÃƒÅ“ber das Men&uuml; <em>View Ã¢â€ â€™ Lab Mode</em>
+        oder per Tastenk&uuml;rzel den Lab-Mode aktivieren.
         <img src="bilder/tmo_extension/step2.png" alt="Lab-Mode aktivieren"
              class="lb-img"
       </li>
@@ -91,21 +103,21 @@
              class="lb-img"
       </li>
       <li>
-        <strong>Block „cp_net_block&ldquo; erweitern</strong> &ndash; In der Baumstruktur
+        <strong>Block Ã¢â‚¬Å¾cp_net_block&ldquo; erweitern</strong> &ndash; In der Baumstruktur
         den Block <em>cp_net_block</em> aufklappen.
       </li>
       <li>
-        <strong>Block „net_data&ldquo; erweitern</strong> &ndash; Unter <em>cp_net_block</em>
+        <strong>Block Ã¢â‚¬Å¾net_data&ldquo; erweitern</strong> &ndash; Unter <em>cp_net_block</em>
         den Block <em>net_data</em> aufklappen.
       </li>
       <li>
-        <strong>Block „TMO_range_table[]&ldquo; erweitern</strong> &ndash; Unter
+        <strong>Block Ã¢â‚¬Å¾TMO_range_table[]&ldquo; erweitern</strong> &ndash; Unter
         <em>net_data</em> den Block <em>TMO_range_table[]</em> aufklappen.
       </li>
       <li>
-        <strong>max_rx_freq anpassen</strong> &ndash; Bei jedem der 16 Einträge unter
+        <strong>max_rx_freq anpassen</strong> &ndash; Bei jedem der 16 Eintr&auml;ge unter
         <em>TMO_range_table[]</em> den Wert <code>max_rx_freq</code> von
-        <strong>430000000</strong> auf <strong>440000000</strong> ändern.
+        <strong>430000000</strong> auf <strong>440000000</strong> &auml;ndern.
         <img src="bilder/tmo_extension/step7.png" alt="max_rx_freq auf 440000000"
              class="lb-img"
       </li>
@@ -117,16 +129,16 @@
              class="lb-img"
       </li>
       <li>
-        <strong>Lab-Mode verlassen</strong> &ndash; Über <em>View → Lab Mode</em> den
-        Lab-Mode wieder deaktivieren. Dadurch werden die Änderungen validiert und
+        <strong>Lab-Mode verlassen</strong> &ndash; ÃƒÅ“ber <em>View Ã¢â€ â€™ Lab Mode</em> den
+        Lab-Mode wieder deaktivieren. Dadurch werden die Ãƒ„nderungen validiert und
         gespeichert.
         <img src="bilder/tmo_extension/step9.png" alt="Lab-Mode verlassen"
              class="lb-img"
       </li>
       <li>
-        <strong>Write Entire Codeplug</strong> &ndash; Den vollständigen Codeplug ins Gerät
+        <strong>Write Entire Codeplug</strong> &ndash; Den vollst&auml;ndigen Codeplug ins Ger&auml;t
         schreiben. <em>Write Codeplug</em> reicht nicht &ndash; nur <em>Write Entire
-        Codeplug</em> überträgt die Range-Tables.
+        Codeplug</em> &uuml;bertr&auml;gt die Range-Tables.
         <img src="bilder/tmo_extension/step10.png" alt="Write Entire Codeplug"
              class="lb-img"
       </li>
@@ -139,13 +151,13 @@
     DN9PHI &middot; <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
     Ortsverband <a href="https://darc.de/g11/" target="_blank">G11 Leverkusen</a>
   </p>
-  <p>Diese Seite dient ausschließlich dem nicht-kommerziellen Hobby Amateurfunk.</p>
+  <p>Diese Seite dient ausschlie&szlig;lich dem nicht-kommerziellen Hobby Amateurfunk.</p>
   <p style="font-size:0.8rem;color:#6c8eb0;">
     Gehostet auf Infrastruktur des
     <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
     <a href="https://www.darc.de/impressum/" target="_blank">Impressum</a>
     &middot;
-    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerklärung</a>
+    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerkl&auml;rung</a>
   </p>
 </footer>
 
@@ -161,3 +173,6 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+
+

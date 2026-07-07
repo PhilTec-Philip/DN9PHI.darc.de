@@ -15,16 +15,16 @@
       <h1>DN9PHI <small>Amateurfunk</small></h1>
     </div>
   </div>
-  <button class="hamburger" onclick="toggleNav()" aria-label="Menü">
+  <button class="hamburger" onclick="toggleNav()" aria-label="Men&uuml;">
     <span></span><span></span><span></span>
   </button>
-  <nav>
+    <nav>
     <a href="index.html">Start</a>
     <a href="ueber-mich.html">Über mich</a>
     <div class="dropdown" data-subnav="aktivitaeten">
-      <a href="aktivitaeten.html" class="dropbtn">Aktivitäten</a>
+      <a href="aktivitaeten.html" class="dropbtn active">Aktivitäten</a>
       <div class="dropdown-content">
-        <a href="sstv.html" class="active">SSTV</a>
+        <a href="sstv.html">SSTV</a>
         <a href="qsl-cards.html">QSL-Cards</a>
       </div>
     </div>
@@ -38,11 +38,18 @@
     </div>
     <a href="dmr.html">DMR</a>
     <a href="logbuch.html">Logbuch</a>
+    <div class="dropdown" data-subnav="diy">
+      <a href="#" class="dropbtn">DIY</a>
+      <div class="dropdown-content">
+        <a href="blumentopf.html">Blumentopfantenne</a>
+        <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+      </div>
+    </div>
     <a href="links.html">Links</a>
     <div class="subnav" id="subnav-aktivitaeten">
       <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
       <a href="aktivitaeten.html">Übersicht</a>
-      <a href="sstv.html" class="active">SSTV</a>
+      <a href="sstv.html">SSTV</a>
       <a href="qsl-cards.html">QSL-Cards</a>
     </div>
     <div class="subnav" id="subnav-tetra">
@@ -51,15 +58,20 @@
       <a href="tetra-frequenz.html">Frequenzerweiterung</a>
       <a href="tetra-duplex.html">Duplex-Tables</a>
     </div>
+    <div class="subnav" id="subnav-diy">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="blumentopf.html">Blumentopfantenne</a>
+      <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+    </div>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>SSTV-Empfänge</h2>
+    <h2>SSTV-Empf&auml;nge</h2>
     <p>
-      SSTV (Slow Scan Television) ermöglicht die Übertragung von Standbildern
-      über Funk. Hier dokumentiere ich meine erfolgreichen Empfänge von der
+      SSTV (Slow Scan Television) erm&ouml;glicht die ÃƒÅ“bertragung von Standbildern
+      &uuml;ber Funk. Hier dokumentiere ich meine erfolgreichen Empf&auml;nge von der
       Internationalen Raumstation (ISS) sowie von Amateurfunk-Wetterballonen.
     </p>
   </section>
@@ -67,8 +79,8 @@
   <section>
     <h2>World Space Week &ndash; Oktober 2025</h2>
     <p>
-      Empfangene SSTV-Bilder von der ISS während eines Aktivzeitraums im
-      Oktober 2025. Die Bilder wurden mit einem Handfunkgerät und entsprechender
+      Empfangene SSTV-Bilder von der ISS w&auml;hrend eines Aktivzeitraums im
+      Oktober 2025. Die Bilder wurden mit einem Handfunkger&auml;t und entsprechender
       Software dekodiert.
     </p>
 
@@ -95,9 +107,9 @@
     <h2>Wetterballon SSTV &ndash; September 2025</h2>
     <p>
       Im September 2025 habe ich SSTV-Bilder von einem Amateurfunk-Wetterballon
-      empfangen. Die Bilder wurden während des Fluges in der Stratosphäre
+      empfangen. Die Bilder wurden w&auml;hrend des Fluges in der Stratosph&auml;re
       aufgenommen und per Funk zur Erde gesendet. <br>
-      Weitere Infos zu Amateurfunk-Wetterballons und deren SSTV-Übertragungen findest du auf <a href="https://www.g-fliegt.de/" target="_blank">G-Fliegt</a>.
+      Weitere Infos zu Amateurfunk-Wetterballons und deren SSTV-ÃƒÅ“bertragungen findest du auf <a href="https://www.g-fliegt.de/" target="_blank">G-Fliegt</a>.
     </p>
 
     <div class="sstv-gallery">
@@ -132,13 +144,13 @@
     <a href="https://qrz.com/db/DN9PHI" target="_blank">QRZ.com</a> &middot;
     <a href="https://www.instagram.com/darc_g11/" target="_blank">Instagram @darc_g11</a>
   </p>
-  <p>Diese Seite dient ausschließlich dem nicht-kommerziellen Hobby Amateurfunk.</p>
+  <p>Diese Seite dient ausschlie&szlig;lich dem nicht-kommerziellen Hobby Amateurfunk.</p>
   <p style="font-size:0.8rem;color:#6c8eb0;">
     Gehostet auf Infrastruktur des
     <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
     <a href="https://www.darc.de/impressum/" target="_blank">Impressum</a>
     &middot;
-    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerklärung</a>
+    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerkl&auml;rung</a>
   </p>
 </footer>
 
@@ -154,3 +166,6 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+
+

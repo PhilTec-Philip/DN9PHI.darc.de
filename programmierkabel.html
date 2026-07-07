@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programmierkabel MTM800E &ndash; DN9PHI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="bilder/logo.png" alt="DN9PHI Logo">
+    <div>
+      <h1>DN9PHI <small>Amateurfunk</small></h1>
+    </div>
+  </div>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <div class="dropdown" data-subnav="aktivitaeten">
+      <a href="aktivitaeten.html" class="dropbtn">Aktivitäten</a>
+      <div class="dropdown-content">
+        <a href="sstv.html">SSTV</a>
+        <a href="qsl-cards.html">QSL-Cards</a>
+      </div>
+    </div>
+    <div class="dropdown" data-subnav="tetra">
+      <a href="tetra.html" class="dropbtn">TETRA</a>
+      <div class="dropdown-content">
+        <a href="tetra.html">Übersicht</a>
+        <a href="tetra-frequenz.html">Frequenzerweiterung</a>
+        <a href="tetra-duplex.html">Duplex-Tables</a>
+      </div>
+    </div>
+    <a href="dmr.html">DMR</a>
+    <a href="logbuch.html">Logbuch</a>
+    <div class="dropdown" data-subnav="diy">
+      <a href="#" class="dropbtn active">DIY</a>
+      <div class="dropdown-content">
+        <a href="blumentopf.html">Blumentopfantenne</a>
+        <a href="programmierkabel.html" class="active">Programmierkabel MTM800E</a>
+      </div>
+    </div>
+    <a href="links.html">Links</a>
+    <div class="subnav" id="subnav-aktivitaeten">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="aktivitaeten.html">Übersicht</a>
+      <a href="sstv.html">SSTV</a>
+      <a href="qsl-cards.html">QSL-Cards</a>
+    </div>
+    <div class="subnav" id="subnav-tetra">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="tetra.html">Übersicht</a>
+      <a href="tetra-frequenz.html">Frequenzerweiterung</a>
+      <a href="tetra-duplex.html">Duplex-Tables</a>
+    </div>
+    <div class="subnav" id="subnav-diy">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="blumentopf.html">Blumentopfantenne</a>
+      <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Programmierkabel für das Motorola MTM800E herstellen</h2>
+    <p>
+      Das MTM800E wird über den Accessory Connector auf der Rückseite programmiert.
+      Dieser Stecker ist ähnlich wie bei den Serien GM300 oder TM900, hat aber
+      zusätzliche Pins. Mit einem handelsüblichen USB-A-auf-B-Kabel und bei Bedarf
+      einem passenden Stecker lässt sich ein Programmierkabel einfach selbst bauen.
+    </p>
+  </section>
+
+  <section>
+    <h2>Pinbelegung</h2>
+    <table class="data-table">
+      <tr><th>Pin</th><th>Bezeichnung</th><th>Beschreibung</th></tr>
+      <tr><td>1</td><td>EXTERNAL SPEAKER &minus;</td><td>Lautsprecher &minus; (Gegenstück zu Pin 16)</td></tr>
+      <tr><td>2</td><td>EXTERNAL MIC AUDIO</td><td>Externer Mikrofoneingang (80 mVRMS, 660 &Omega; DC)</td></tr>
+      <tr><td>3</td><td>EXTERNAL PTT</td><td>Digitaler PTT-Eingang (Low = aktiv)</td></tr>
+      <tr><td>4</td><td>EXTERNAL ALARM</td><td>Alarmausgang (Open Collector, 4k7 Pull-up)</td></tr>
+      <tr><td>5</td><td>TX_AUDIO</td><td>TX-Audio-Einspeisung (&gt;10 k&Omega;, 775 mVRMS)</td></tr>
+      <tr><td>6</td><td>KEYFAIL/FLASH</td><td>Verschl&uuml;sselungsmodul</td></tr>
+      <tr><td>7</td><td>ANALOG GROUND</td><td>Analoge Masse</td></tr>
+      <tr><td>8</td><td>DIGITAL GROUND</td><td>Digitale Masse</td></tr>
+      <tr><td>9</td><td>EMERGENCY</td><td>Emergency (Low = aktiv, schaltet Ger&auml;t ein)</td></tr>
+      <tr><td>10</td><td>IGNITION</td><td>Z&uuml;ndungseingang (High = aktiv)</td></tr>
+      <tr><td>11</td><td>RX_AUDIO</td><td>RX-Audio-Ausgang (775 mVRMS, 600 &Omega;)</td></tr>
+      <tr><td>12</td><td>AUDIO_PA_ENABLE</td><td>Audio-PA freigeben (High = ein)</td></tr>
+      <tr><td>13</td><td>SWB +</td><td>Geschaltete Versorgung (max. 1,0 A)</td></tr>
+      <tr><td>14</td><td>HOOK</td><td>Hook-Status (Low = aufgelegt, High = abgehoben)</td></tr>
+      <tr><td>15</td><td>SCI_DTR</td><td>Service (reserviert)</td></tr>
+      <tr><td>16</td><td>SPEAKER +</td><td>Lautsprecher + (Gegenst&uuml;ck zu Pin 1)</td></tr>
+      <tr><td>17</td><td>SCI CTS</td><td>Service (Clear To Send, reserviert)</td></tr>
+      <tr><td>18</td><td>SCI RTS</td><td>Service (Request To Send, reserviert)</td></tr>
+      <tr><td>19</td><td>SCI RXD</td><td>Service (Receive Data, reserviert)</td></tr>
+      <tr><td>20</td><td>SCI TXD</td><td>Service (Transmit Data, reserviert)</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Benötigte Materialien</h2>
+    <p style="font-size:0.85rem;color:#6c8eb0;">
+      <strong>Gut zu wissen:</strong> Der Accessory-Stecker ist praktisch, aber
+      nicht zwingend nötig. Du kannst auch <strong>Female-Jumper-Wires</strong>
+      (Buchsen-Seite) nehmen und die Kontakte direkt von hinten auf die
+      Stiftleiste des Funkgeräts stecken &ndash; das spart die Suche nach dem
+      original Stecker.
+    </p>
+    <ul>
+      <li>USB-A-auf-B-Kabel (gängiges Drucker-/Scannerkabel, je besser die Qualität desto besser)</li>
+      <li>Passender Accessory-Stecker für das MTM800E oder Female-Jumper-Wires</li>
+      <li>Lötkolben, Lötzinn, Schrumpfschlauch</li>
+    </ul>
+    <img src="bilder/programmierkabel/mtm800-connector.png" alt="Accessory Connector"
+         class="lb-img" style="max-width:320px;width:100%;height:auto;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+  </section>
+
+  <section>
+    <h2>Bauanleitung</h2>
+    <ol class="guide-steps">
+      <li>
+        <strong>USB-Stecker abtrennen</strong> &ndash; Den USB-B-Stecker des Kabels
+        abkneifen, sodass die Adern frei liegen.
+      </li>
+      <li>
+        <strong>Pins identifizieren</strong> &ndash; Anhand der Pinbelegung die
+        richtigen Kontakte am Accessory-Stecker bestimmen:
+        Pin 18, 8, 19 und 20.
+      </li>
+      <li>
+        <strong>Kabel abisolieren</strong> &ndash; Die Enden der USB-Kabeladern und
+        die Lötstellen am Stecker abisolieren bzw. verzinnen.
+      </li>
+      <li>
+        <strong>Verbindungen l&ouml;ten</strong> &ndash; Die folgenden vier Pins
+        miteinander verbinden:
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;margin-top:0.5rem;">
+          <table class="data-table" style="margin:0;flex:1;min-width:220px;">
+            <tr><th>Pin</th><th>Anschluss</th><th>Funktion</th></tr>
+            <tr><td>8</td><td>GND</td><td>Masse</td></tr>
+            <tr><td>18</td><td>VCC</td><td>Spannungsversorgung (3.3V)</td></tr>
+            <tr><td>19</td><td>TXD</td><td>Daten senden</td></tr>
+            <tr><td>20</td><td>RXD</td><td>Daten empfangen</td></tr>
+          </table>
+          <img src="bilder/programmierkabel/mtm800e-acc-cable.jpg" alt="Fertiges Kabel mit Accessory-Stecker"
+               class="lb-img" style="flex:1;min-width:180px;max-width:360px;height:auto;margin:0;border:1px solid #1e3a5f;border-radius:4px;cursor:pointer;">
+          <img src="bilder/programmierkabel/mtm800e-jumper-cable.jpg" alt="Fertiges Kabel mit Jumper-Wires"
+               class="lb-img" style="flex:1;min-width:180px;max-width:360px;height:auto;margin:0;border:1px solid #1e3a5f;border-radius:4px;cursor:pointer;">
+        </div>
+      </li>
+      <li>
+        <strong>Kabel testen</strong> &ndash; Mit einem Multimeter die Durchgängigkeit
+        aller Verbindungen prüfen.
+      </li>
+      <li>
+        <strong>Schrumpfschlauch anbringen</strong> &ndash; Alle Lötstellen mit
+        Schrumpfschlauch isolieren.
+      </li>
+    </ol>
+    <p>
+      Fertig! Das Kabel wird am PC als USB-Seriell-Adapter erkannt. Für die
+      Programmierung des MTM800E wird die Motorola CPS (Customer Programming Software)
+      benötigt.
+    </p>
+    <p style="font-size:0.85rem;color:#6c8eb0;">
+      <strong>Hinweis:</strong> Wer kein USB-, sondern ein RS232-Kabel bauen möchte,
+      findet bei
+      <a href="https://www.pe2kmv.nl/wp/en/motorola-tetra-programmer-uk/" target="_blank">PE2KMV</a>
+      eine Schritt-für-Schritt-Anleitung.
+    </p>
+    <p style="font-size:0.85rem;color:#6c8eb0;">
+      Anleitung &amp; Bilder basieren auf dem Originalartikel von
+      <a href="https://www.hamtetra.com/how-to-build-a-motorola-mtm800-mtm800e-programming-cable/" target="_blank">HamTetra Network</a>.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    DN9PHI &middot; <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
+    Ortsverband <a href="https://darc.de/g11/" target="_blank">G11 Leverkusen</a>
+  </p>
+  <p>Diese Seite dient ausschlie&szlig;lich dem nicht-kommerziellen Hobby Amateurfunk.</p>
+  <p style="font-size:0.8rem;color:#6c8eb0;">
+    Gehostet auf Infrastruktur des
+    <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
+    <a href="https://www.darc.de/impressum/" target="_blank">Impressum</a>
+    &middot;
+    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerklärung</a>
+  </p>
+</footer>
+
+<div class="lightbox-overlay" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span class="lightbox-nav lightbox-prev" onclick="prevImage()">&#10094;</span>
+  <span class="lightbox-nav lightbox-next" onclick="nextImage()">&#10095;</span>
+  <img class="lightbox-img" id="lightbox-img" alt="">
+  <div class="lightbox-filename" id="lightbox-filename"></div>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+

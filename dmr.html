@@ -15,10 +15,10 @@
       <h1>DN9PHI <small>Amateurfunk</small></h1>
     </div>
   </div>
-  <button class="hamburger" onclick="toggleNav()" aria-label="Menü">
+  <button class="hamburger" onclick="toggleNav()" aria-label="Men&uuml;">
     <span></span><span></span><span></span>
   </button>
-  <nav>
+    <nav>
     <a href="index.html">Start</a>
     <a href="ueber-mich.html">Über mich</a>
     <div class="dropdown" data-subnav="aktivitaeten">
@@ -38,6 +38,13 @@
     </div>
     <a href="dmr.html" class="active">DMR</a>
     <a href="logbuch.html">Logbuch</a>
+    <div class="dropdown" data-subnav="diy">
+      <a href="#" class="dropbtn">DIY</a>
+      <div class="dropdown-content">
+        <a href="blumentopf.html">Blumentopfantenne</a>
+        <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+      </div>
+    </div>
     <a href="links.html">Links</a>
     <div class="subnav" id="subnav-aktivitaeten">
       <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
@@ -51,6 +58,11 @@
       <a href="tetra-frequenz.html">Frequenzerweiterung</a>
       <a href="tetra-duplex.html">Duplex-Tables</a>
     </div>
+    <div class="subnav" id="subnav-diy">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="blumentopf.html">Blumentopfantenne</a>
+      <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+    </div>
   </nav>
 </header>
 
@@ -59,7 +71,7 @@
     <h2>DMR &ndash; Digital Mobile Radio</h2>
     <p>
       DMR (Digital Mobile Radio) ist ein digitaler Sprach- und Datenfunkstandard,
-      der im Amateurfunk weit verbreitet ist. Ich nutze DMR über das
+      der im Amateurfunk weit verbreitet ist. Ich nutze DMR &uuml;ber das
       <strong>Brandmeister-Netzwerk</strong> mit meiner DMR-ID <strong>2635261</strong>.
     </p>
   </section>
@@ -67,60 +79,60 @@
   <section>
     <h2>Mein Setup</h2>
     <ul class="equipment-list">
-      <li><strong>AnyTone AT-D878UV II Plus</strong> &ndash; DMR-Handfunkgerät (VHF/UHF)</li>
-      <li><strong>MMDVM-Hotspot</strong> &ndash; Eigenbau, verbindet das Funkgerät via WLAN mit Brandmeister</li>
+      <li><strong>AnyTone AT-D878UV II Plus</strong> &ndash; DMR-Handfunkger&auml;t (VHF/UHF)</li>
+      <li><strong>MMDVM-Hotspot</strong> &ndash; Eigenbau, verbindet das Funkger&auml;t via WLAN mit Brandmeister</li>
     </ul>
     <p>
-      Der Hotspot läuft mit einem MMDVM-Board und einer Raspberry-Pi-Software
-      namens "Pi-Star". Damit bin ich unabhängig von öffentlichen DMR-Reportern
-      und kann über mein Handfunkgerät weltweit QSOs führen.
+      Der Hotspot l&auml;uft mit einem MMDVM-Board und einer Raspberry-Pi-Software
+      namens "Pi-Star". Damit bin ich unabh&auml;ngig von &ouml;ffentlichen DMR-Reportern
+      und kann &uuml;ber mein Handfunkger&auml;t weltweit QSOs f&uuml;hren.
     </p>
   </section>
 
   <section>
-    <h2>Coole Töne für das AnyTone</h2>
+    <h2>Coole T&ouml;ne f&uuml;r das AnyTone</h2>
     <p>
-      Das AnyTone AT-D878UV II Plus erlaubt es, eigene Töne über fünf
-      konfigurierbare Töne (Tone 1&ndash;5) zu definieren. Jeder Ton hat eine
+      Das AnyTone AT-D878UV II Plus erlaubt es, eigene T&ouml;ne &uuml;ber f&uuml;nf
+      konfigurierbare T&ouml;ne (Tone 1&ndash;5) zu definieren. Jeder Ton hat eine
       <strong>Frequenz (Hz)</strong> und eine <strong>Periodendauer (ms)</strong>.
       Mit Tone 5 (Frequenz 0, Dauer 0) endet die Sequenz.
     </p>
     <p>
-      Hier sind ein paar Nachbauten bekannter Klänge aus dem BOS-Bereich:
+      Hier sind ein paar Nachbauten bekannter Kl&auml;nge aus dem BOS-Bereich:
     </p>
 
-    <h3>Sepura Call Clear Tone („Wait&ldquo;)</h3>
-    <table class="tone-table">
+    <h3>Sepura Call Clear Tone (Ã¢â‚¬Å¾Wait&ldquo;)</h3>
+    <table class="data-table">
       <tr><th>Ton</th><th>Frequenz (Hz)</th><th>Dauer (ms)</th></tr>
       <tr><td>1</td><td>780</td><td>200</td></tr>
       <tr><td>2</td><td>780</td><td>100</td></tr>
       <tr><td>3</td><td>520</td><td>200</td></tr>
       <tr><td>4</td><td>520</td><td>100</td></tr>
-      <tr><td>5</td><td>0</td><td>0</td></tr>
+      <tr class="tone-end"><td>5</td><td>0</td><td>0</td></tr>
     </table>
 
-    <h3>Sepura Call Tone Open („Wait&ldquo;)</h3>
-    <table class="tone-table">
+    <h3>Sepura Call Tone Open (Ã¢â‚¬Å¾Wait&ldquo;)</h3>
+    <table class="data-table">
       <tr><th>Ton</th><th>Frequenz (Hz)</th><th>Dauer (ms)</th></tr>
       <tr><td>1</td><td>520</td><td>200</td></tr>
       <tr><td>2</td><td>520</td><td>100</td></tr>
       <tr><td>3</td><td>780</td><td>200</td></tr>
       <tr><td>4</td><td>780</td><td>100</td></tr>
-      <tr><td>5</td><td>0</td><td>0</td></tr>
+      <tr class="tone-end"><td>5</td><td>0</td><td>0</td></tr>
     </table>
 
     <h3>Motorola Chirp Sound</h3>
-    <table class="tone-table">
+    <table class="data-table">
       <tr><th>Ton</th><th>Frequenz (Hz)</th><th>Dauer (ms)</th></tr>
       <tr><td>1</td><td>1570</td><td>40</td></tr>
       <tr><td>2</td><td>1040</td><td>40</td></tr>
       <tr><td>3</td><td>1570</td><td>40</td></tr>
       <tr><td>4</td><td>1320</td><td>40</td></tr>
-      <tr><td>5</td><td>0</td><td>0</td></tr>
+      <tr class="tone-end"><td>5</td><td>0</td><td>0</td></tr>
     </table>
 
     <h3>Motorola Call End Sound</h3>
-    <table class="tone-table">
+    <table class="data-table">
       <tr><th>Ton</th><th>Frequenz (Hz)</th><th>Dauer (ms)</th></tr>
       <tr><td>1</td><td>910</td><td>30</td></tr>
       <tr><td>2</td><td>0</td><td>20</td></tr>
@@ -130,7 +142,7 @@
     </table>
 
     <h3>Motorola Idle</h3>
-    <table class="tone-table">
+    <table class="data-table">
       <tr><th>Ton</th><th>Frequenz (Hz)</th><th>Dauer (ms)</th></tr>
       <tr><td>1</td><td>2000</td><td>50</td></tr>
       <tr><td>2</td><td>0</td><td>100</td></tr>
@@ -140,7 +152,7 @@
     </table>
 
     <h3>Motorola Call End</h3>
-    <table class="tone-table">
+    <table class="data-table">
       <tr><th>Ton</th><th>Frequenz (Hz)</th><th>Dauer (ms)</th></tr>
       <tr><td>1</td><td>2500</td><td>50</td></tr>
       <tr><td>2</td><td>0</td><td>100</td></tr>
@@ -150,9 +162,9 @@
     </table>
 
     <p style="margin-top:1rem;font-size:0.85rem;color:#6c8eb0;">
-      <strong>Hinweis:</strong> Die Töne werden in der AnyTone-CPS unter
-      <em>Optional Setting → Alert Tone</em> und <em>Alert Tone1</em> konfiguriert.
-      Alle Angaben ohne Gewähr.
+      <strong>Hinweis:</strong> Die T&ouml;ne werden in der AnyTone-CPS unter
+      <em>Optional Setting Ã¢â€ â€™ Alert Tone</em> und <em>Alert Tone1</em> konfiguriert.
+      Alle Angaben ohne Gew&auml;hr.
     </p>
   </section>
 </main>
@@ -162,13 +174,13 @@
     DN9PHI &middot; <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
     Ortsverband <a href="https://darc.de/g11/" target="_blank">G11 Leverkusen</a>
   </p>
-  <p>Diese Seite dient ausschließlich dem nicht-kommerziellen Hobby Amateurfunk.</p>
+  <p>Diese Seite dient ausschlie&szlig;lich dem nicht-kommerziellen Hobby Amateurfunk.</p>
   <p style="font-size:0.8rem;color:#6c8eb0;">
     Gehostet auf Infrastruktur des
     <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
     <a href="https://www.darc.de/impressum/" target="_blank">Impressum</a>
     &middot;
-    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerklärung</a>
+    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerkl&auml;rung</a>
   </p>
 </footer>
 
@@ -184,3 +196,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+
+
+

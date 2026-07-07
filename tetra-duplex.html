@@ -15,10 +15,10 @@
       <h1>DN9PHI <small>Amateurfunk</small></h1>
     </div>
   </div>
-  <button class="hamburger" onclick="toggleNav()" aria-label="Menü">
+  <button class="hamburger" onclick="toggleNav()" aria-label="Men&uuml;">
     <span></span><span></span><span></span>
   </button>
-  <nav>
+    <nav>
     <a href="index.html">Start</a>
     <a href="ueber-mich.html">Über mich</a>
     <div class="dropdown" data-subnav="aktivitaeten">
@@ -29,15 +29,22 @@
       </div>
     </div>
     <div class="dropdown" data-subnav="tetra">
-      <a href="tetra.html" class="dropbtn">TETRA</a>
+      <a href="tetra.html" class="dropbtn active">TETRA</a>
       <div class="dropdown-content">
         <a href="tetra.html">Übersicht</a>
         <a href="tetra-frequenz.html">Frequenzerweiterung</a>
-        <a href="tetra-duplex.html" class="active">Duplex-Tables</a>
+        <a href="tetra-duplex.html">Duplex-Tables</a>
       </div>
     </div>
     <a href="dmr.html">DMR</a>
     <a href="logbuch.html">Logbuch</a>
+    <div class="dropdown" data-subnav="diy">
+      <a href="#" class="dropbtn">DIY</a>
+      <div class="dropdown-content">
+        <a href="blumentopf.html">Blumentopfantenne</a>
+        <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+      </div>
+    </div>
     <a href="links.html">Links</a>
     <div class="subnav" id="subnav-aktivitaeten">
       <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
@@ -49,7 +56,12 @@
       <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
       <a href="tetra.html">Übersicht</a>
       <a href="tetra-frequenz.html">Frequenzerweiterung</a>
-      <a href="tetra-duplex.html" class="active">Duplex-Tables</a>
+      <a href="tetra-duplex.html">Duplex-Tables</a>
+    </div>
+    <div class="subnav" id="subnav-diy">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
+      <a href="blumentopf.html">Blumentopfantenne</a>
+      <a href="programmierkabel.html">Programmierkabel MTM800E</a>
     </div>
   </nav>
 </header>
@@ -58,62 +70,62 @@
   <section>
     <h2>Duplex-Tables auf 7,6 MHz einrichten</h2>
     <p>
-      Für den TMO-Betrieb auf den Amateurfunkfrequenzen müssen die Duplex-Tabellen
-      in der Motorola CPS korrekt konfiguriert werden. Der standardmäßige TX/RX-Split
-      beträgt 7,6 MHz &ndash; diese Einstellung muss in den Band- und Kanalparametern
+      F&uuml;r den TMO-Betrieb auf den Amateurfunkfrequenzen m&uuml;ssen die Duplex-Tabellen
+      in der Motorola CPS korrekt konfiguriert werden. Der standardm&auml;&szlig;ige TX/RX-Split
+      betr&auml;gt 7,6 MHz &ndash; diese Einstellung muss in den Band- und Kanalparametern
       hinterlegt werden.
     </p>
     <p>
       Es gibt zwei Wege die Einstellung vorzunehmen:
-      <a href="#methode1"><strong>Methode 1</strong></a> (über „Mobility and System
+      <a href="#methode1"><strong>Methode 1</strong></a> (&uuml;ber Ã¢â‚¬Å¾Mobility and System
       Parameters&ldquo;) ist einfacher und sollte bevorzugt werden. Lassen sich die
       Parameter dort nicht setzen, verwende
-      <a href="#methode2"><strong>Methode 2</strong></a> (über Lab-Mode und
-      „duplex_space_table&ldquo;).
+      <a href="#methode2"><strong>Methode 2</strong></a> (&uuml;ber Lab-Mode und
+      Ã¢â‚¬Å¾duplex_space_table&ldquo;).
     </p>
     <p style="font-size:0.85rem;color:#6c8eb0;">
-      <strong>Hinweis:</strong> Alle Angaben ohne Gewähr. Keine Haftung für Schäden an
-      den Geräten. Die Erweiterung kann je nach CPS-Version leicht abweichen.
+      <strong>Hinweis:</strong> Alle Angaben ohne Gew&auml;hr. Keine Haftung f&uuml;r Sch&auml;den an
+      den Ger&auml;ten. Die Erweiterung kann je nach CPS-Version leicht abweichen.
     </p>
   </section>
 
   <section id="methode1">
-    <h2>Methode 1 &ndash; Über „Mobility and System Parameters&ldquo;</h2>
+    <h2>Methode 1 &ndash; ÃƒÅ“ber Ã¢â‚¬Å¾Mobility and System Parameters&ldquo;</h2>
     <ol class="guide-steps">
       <li>
-        <strong>Codeplug öffnen</strong> &ndash; CPS starten und den vorhandenen Codeplug
-        laden oder aus dem Gerät auslesen.
-        <img src="bilder/duplex_table_change1/step1.png" alt="Codeplug geöffnet"
+        <strong>Codeplug &ouml;ffnen</strong> &ndash; CPS starten und den vorhandenen Codeplug
+        laden oder aus dem Ger&auml;t auslesen.
+        <img src="bilder/duplex_table_change1/step1.png" alt="Codeplug ge&ouml;ffnet"
              class="lb-img"
       </li>
       <li>
-        <strong>Block „Mobility and System Parameters&ldquo; finden</strong> &ndash; In der
+        <strong>Block Ã¢â‚¬Å¾Mobility and System Parameters&ldquo; finden</strong> &ndash; In der
         Baumstruktur nach diesem Block suchen und erweitern.
         <img src="bilder/duplex_table_change1/step2.png" alt="Mobility and System Parameters"
              class="lb-img"
       </li>
       <li>
-        <strong>Block „Mobility Parameters&ldquo; öffnen</strong> &ndash; Unter dem
+        <strong>Block Ã¢â‚¬Å¾Mobility Parameters&ldquo; &ouml;ffnen</strong> &ndash; Unter dem
         vorherigen Block den Parameter-Block aufklappen.
         <img src="bilder/duplex_table_change1/step3.png" alt="Mobility Parameters"
              class="lb-img"
       </li>
       <li>
         <strong>Bis zu Zeile 28 scrollen</strong> &ndash; Die Tabelle mit den Duplex-Table-
-        Einträgen befindet sich in den unteren Zeilen.
-        <img src="bilder/duplex_table_change1/step4.png" alt="Duplex-Table Einträge"
+        Eintr&auml;gen befindet sich in den unteren Zeilen.
+        <img src="bilder/duplex_table_change1/step4.png" alt="Duplex-Table Eintr&auml;ge"
              class="lb-img"
       </li>
       <li>
-        <strong>Table 1 und Table 7 anpassen</strong> &ndash; In den Zeilen für Table 1 und
+        <strong>Table 1 und Table 7 anpassen</strong> &ndash; In den Zeilen f&uuml;r Table 1 und
         Table 7 den Wert <code>45</code> durch <strong>7,6</strong> ersetzen.
-        <img src="bilder/duplex_table_change1/step7.png" alt="Wert auf 7,6 geändert"
+        <img src="bilder/duplex_table_change1/step7.png" alt="Wert auf 7,6 ge&auml;ndert"
              class="lb-img"
       </li>
       <li>
-        <strong>Write Entire Codeplug</strong> &ndash; Den vollständigen Codeplug ins Gerät
+        <strong>Write Entire Codeplug</strong> &ndash; Den vollst&auml;ndigen Codeplug ins Ger&auml;t
         schreiben. <em>Write Codeplug</em> reicht nicht &ndash; nur <em>Write Entire
-        Codeplug</em> überträgt die Duplex-Tables.
+        Codeplug</em> &uuml;bertr&auml;gt die Duplex-Tables.
         <img src="bilder/duplex_table_change1/step8.png" alt="Write Entire Codeplug"
              class="lb-img"
       </li>
@@ -121,15 +133,15 @@
   </section>
 
   <section id="methode2">
-    <h2>Methode 2 &ndash; Über Lab-Mode und „duplex_space_table&ldquo;</h2>
+    <h2>Methode 2 &ndash; ÃƒÅ“ber Lab-Mode und Ã¢â‚¬Å¾duplex_space_table&ldquo;</h2>
     <ol class="guide-steps">
       <li>
-        <strong>Codeplug öffnen</strong> &ndash; CPS starten und den Codeplug laden.
-        <img src="bilder/duplex_table_change2/step1.png" alt="Codeplug geöffnet"
+        <strong>Codeplug &ouml;ffnen</strong> &ndash; CPS starten und den Codeplug laden.
+        <img src="bilder/duplex_table_change2/step1.png" alt="Codeplug ge&ouml;ffnet"
              class="lb-img"
       </li>
       <li>
-        <strong>Lab-Mode öffnen</strong> &ndash; Über <em>View → Lab Mode</em> aktivieren.
+        <strong>Lab-Mode &ouml;ffnen</strong> &ndash; ÃƒÅ“ber <em>View Ã¢â€ â€™ Lab Mode</em> aktivieren.
         <img src="bilder/duplex_table_change2/step2.png" alt="Lab-Mode"
              class="lb-img"
       </li>
@@ -140,17 +152,17 @@
              class="lb-img"
       </li>
       <li>
-        <strong>Block „cp_net_block&ldquo; erweitern</strong> &ndash; In der Baumstruktur
+        <strong>Block Ã¢â‚¬Å¾cp_net_block&ldquo; erweitern</strong> &ndash; In der Baumstruktur
         aufklappen.
       </li>
       <li>
-        <strong>Auf Block „net_data&ldquo; gehen</strong> &ndash; Unter
-        <em>cp_net_block</em> den Block <em>net_data</em> auswählen.
+        <strong>Auf Block Ã¢â‚¬Å¾net_data&ldquo; gehen</strong> &ndash; Unter
+        <em>cp_net_block</em> den Block <em>net_data</em> ausw&auml;hlen.
         <img src="bilder/duplex_table_change2/step5.png" alt="net_data Block"
              class="lb-img"
       </li>
       <li>
-        <strong>„duplex_space_table&ldquo; auswählen und erweitern</strong> &ndash; Unter
+        <strong>Ã¢â‚¬Å¾duplex_space_table&ldquo; ausw&auml;hlen und erweitern</strong> &ndash; Unter
         <em>net_data</em> die Tabelle <em>duplex_space_table</em> aufklappen.
         <img src="bilder/duplex_table_change2/step6.png" alt="duplex_space_table"
              class="lb-img"
@@ -158,17 +170,17 @@
       <li>
         <strong>Table 1 und Table 7 anpassen</strong> &ndash; In Table 1 und Table 7
         den Wert <code>45000000</code> durch <strong>7600000</strong> ersetzen.
-        <img src="bilder/duplex_table_change2/step7.png" alt="Wert auf 7600000 geändert"
+        <img src="bilder/duplex_table_change2/step7.png" alt="Wert auf 7600000 ge&auml;ndert"
              class="lb-img"
       </li>
       <li>
-        <strong>Lab-Mode verlassen</strong> &ndash; Über <em>View → Lab Mode</em>
-        deaktivieren. Die Änderungen werden dadurch validiert und gespeichert.
+        <strong>Lab-Mode verlassen</strong> &ndash; ÃƒÅ“ber <em>View Ã¢â€ â€™ Lab Mode</em>
+        deaktivieren. Die Ãƒ„nderungen werden dadurch validiert und gespeichert.
         <img src="bilder/duplex_table_change2/step8.png" alt="Lab-Mode verlassen"
              class="lb-img"
       </li>
       <li>
-        <strong>Write Entire Codeplug</strong> &ndash; Den vollständigen Codeplug ins Gerät
+        <strong>Write Entire Codeplug</strong> &ndash; Den vollst&auml;ndigen Codeplug ins Ger&auml;t
         schreiben.
         <img src="bilder/duplex_table_change2/step9.png" alt="Write Entire Codeplug"
              class="lb-img"
@@ -182,13 +194,13 @@
     DN9PHI &middot; <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
     Ortsverband <a href="https://darc.de/g11/" target="_blank">G11 Leverkusen</a>
   </p>
-  <p>Diese Seite dient ausschließlich dem nicht-kommerziellen Hobby Amateurfunk.</p>
+  <p>Diese Seite dient ausschlie&szlig;lich dem nicht-kommerziellen Hobby Amateurfunk.</p>
   <p style="font-size:0.8rem;color:#6c8eb0;">
     Gehostet auf Infrastruktur des
     <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
     <a href="https://www.darc.de/impressum/" target="_blank">Impressum</a>
     &middot;
-    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerklärung</a>
+    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerkl&auml;rung</a>
   </p>
 </footer>
 
@@ -204,3 +216,6 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+
+
