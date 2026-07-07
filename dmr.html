@@ -59,15 +59,100 @@
     <h2>DMR &ndash; Digital Mobile Radio</h2>
     <p>
       DMR (Digital Mobile Radio) ist ein digitaler Sprach- und Datenfunkstandard,
-      der im Amateurfunk weit verbreitet ist. Hier entsteht in Kürze eine Übersicht
-      zu meiner DMR-Aktivität.
+      der im Amateurfunk weit verbreitet ist. Ich nutze DMR über das
+      <strong>Brandmeister-Netzwerk</strong> mit meiner DMR-ID <strong>2635261</strong>.
     </p>
   </section>
 
   <section>
-    <h2>Coming soon …</h2>
+    <h2>Mein Setup</h2>
+    <ul class="equipment-list">
+      <li><strong>AnyTone AT-D878UV II Plus</strong> &ndash; DMR-Handfunkgerät (VHF/UHF)</li>
+      <li><strong>MMDVM-Hotspot</strong> &ndash; Eigenbau, verbindet das Funkgerät via WLAN mit Brandmeister</li>
+    </ul>
     <p>
-      Diese Seite wird noch mit Inhalten gefüllt.
+      Der Hotspot läuft mit einem MMDVM-Board und einer Raspberry-Pi-Software
+      namens "Pi-Star". Damit bin ich unabhängig von öffentlichen DMR-Reportern
+      und kann über mein Handfunkgerät weltweit QSOs führen.
+    </p>
+  </section>
+
+  <section>
+    <h2>Coole Töne für das AnyTone</h2>
+    <p>
+      Das AnyTone AT-D878UV II Plus erlaubt es, eigene Töne über fünf
+      konfigurierbare Töne (Tone 1&ndash;5) zu definieren. Jeder Ton hat eine
+      <strong>Frequenz (Hz)</strong> und eine <strong>Periodendauer (ms)</strong>.
+      Mit Tone 5 (Frequenz 0, Dauer 0) endet die Sequenz.
+    </p>
+    <p>
+      Hier sind ein paar Nachbauten bekannter Klänge aus dem BOS-Bereich:
+    </p>
+
+    <h3>Sepura Call Clear Tone („Wait&ldquo;)</h3>
+    <table class="tone-table">
+      <tr><th>Ton</th><th>Frequenz (Hz)</th><th>Dauer (ms)</th></tr>
+      <tr><td>1</td><td>780</td><td>200</td></tr>
+      <tr><td>2</td><td>780</td><td>100</td></tr>
+      <tr><td>3</td><td>520</td><td>200</td></tr>
+      <tr><td>4</td><td>520</td><td>100</td></tr>
+      <tr><td>5</td><td>0</td><td>0</td></tr>
+    </table>
+
+    <h3>Sepura Call Tone Open („Wait&ldquo;)</h3>
+    <table class="tone-table">
+      <tr><th>Ton</th><th>Frequenz (Hz)</th><th>Dauer (ms)</th></tr>
+      <tr><td>1</td><td>520</td><td>200</td></tr>
+      <tr><td>2</td><td>520</td><td>100</td></tr>
+      <tr><td>3</td><td>780</td><td>200</td></tr>
+      <tr><td>4</td><td>780</td><td>100</td></tr>
+      <tr><td>5</td><td>0</td><td>0</td></tr>
+    </table>
+
+    <h3>Motorola Chirp Sound</h3>
+    <table class="tone-table">
+      <tr><th>Ton</th><th>Frequenz (Hz)</th><th>Dauer (ms)</th></tr>
+      <tr><td>1</td><td>1570</td><td>40</td></tr>
+      <tr><td>2</td><td>1040</td><td>40</td></tr>
+      <tr><td>3</td><td>1570</td><td>40</td></tr>
+      <tr><td>4</td><td>1320</td><td>40</td></tr>
+      <tr><td>5</td><td>0</td><td>0</td></tr>
+    </table>
+
+    <h3>Motorola Call End Sound</h3>
+    <table class="tone-table">
+      <tr><th>Ton</th><th>Frequenz (Hz)</th><th>Dauer (ms)</th></tr>
+      <tr><td>1</td><td>910</td><td>30</td></tr>
+      <tr><td>2</td><td>0</td><td>20</td></tr>
+      <tr><td>3</td><td>910</td><td>30</td></tr>
+      <tr><td>4</td><td>0</td><td>20</td></tr>
+      <tr><td>5</td><td>910</td><td>50</td></tr>
+    </table>
+
+    <h3>Motorola Idle</h3>
+    <table class="tone-table">
+      <tr><th>Ton</th><th>Frequenz (Hz)</th><th>Dauer (ms)</th></tr>
+      <tr><td>1</td><td>2000</td><td>50</td></tr>
+      <tr><td>2</td><td>0</td><td>100</td></tr>
+      <tr><td>3</td><td>2000</td><td>50</td></tr>
+      <tr><td>4</td><td>0</td><td>100</td></tr>
+      <tr><td>5</td><td>0</td><td>100</td></tr>
+    </table>
+
+    <h3>Motorola Call End</h3>
+    <table class="tone-table">
+      <tr><th>Ton</th><th>Frequenz (Hz)</th><th>Dauer (ms)</th></tr>
+      <tr><td>1</td><td>2500</td><td>50</td></tr>
+      <tr><td>2</td><td>0</td><td>100</td></tr>
+      <tr><td>3</td><td>2500</td><td>50</td></tr>
+      <tr><td>4</td><td>0</td><td>100</td></tr>
+      <tr><td>5</td><td>0</td><td>100</td></tr>
+    </table>
+
+    <p style="margin-top:1rem;font-size:0.85rem;color:#6c8eb0;">
+      <strong>Hinweis:</strong> Die Töne werden in der AnyTone-CPS unter
+      <em>Optional Setting → Alert Tone</em> und <em>Alert Tone1</em> konfiguriert.
+      Alle Angaben ohne Gewähr.
     </p>
   </section>
 </main>

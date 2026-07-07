@@ -406,7 +406,14 @@ a:hover {
 }
 
 .guide-steps img {
-  margin-top: 0.5rem;
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  cursor: pointer;
+  display: block;
+  margin: 0.5rem 0;
+  border: 1px solid #1e3a5f;
+  border-radius: 4px;
 }
 
 .equipment-list {
@@ -739,4 +746,38 @@ footer a {
 
   .lightbox-prev { left: 0.5rem; }
   .lightbox-next { right: 0.5rem; }
+}
+
+.tone-table {
+  width: 100%;
+  max-width: 360px;
+  border-collapse: collapse;
+  margin: 0.5rem 0 1.25rem;
+  font-size: 0.9rem;
+}
+
+.tone-table th {
+  background: #1e3b4f;
+  color: #e6edf3;
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.tone-table td {
+  padding: 0.3rem 0.6rem;
+  border-bottom: 1px solid #2a4a5e;
+}
+
+.tone-table tr:last-child td {
+  color: #6c8eb0;
+  font-style: italic;
+}
+
+.tone-table + .tone-table {
+  margin-top: -0.5rem;
+}
+
+@media (max-width: 600px) {
+  .tone-table { max-width: 100%; }
 }
