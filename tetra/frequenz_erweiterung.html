@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frequenzerweiterung &ndash; DN9PHI</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
 <header>
   <div class="header-left">
-    <img src="bilder/logo.png" alt="DN9PHI Logo">
+    <img src="../media/logo.png" alt="DN9PHI Logo">
     <div>
       <h1>DN9PHI <small>Amateurfunk</small></h1>
     </div>
@@ -19,49 +19,51 @@
     <span></span><span></span><span></span>
   </button>
     <nav>
-    <a href="index.html">Start</a>
-    <a href="ueber-mich.html">Über mich</a>
+    <a href="../index.html">Start</a>
+    <a href="../ueber-mich.html">&Uuml;ber mich</a>
     <div class="dropdown" data-subnav="aktivitaeten">
-      <a href="aktivitaeten.html" class="dropbtn">Aktivitäten</a>
+      <a href="../aktivitaeten/" class="dropbtn">Aktivit&auml;ten</a>
       <div class="dropdown-content">
-        <a href="sstv.html">SSTV</a>
-        <a href="qsl-cards.html">QSL-Cards</a>
+        <a href="../aktivitaeten/sstv.html">SSTV</a>
+        <a href="../aktivitaeten/qsl-cards.html">QSL-Cards</a>
       </div>
     </div>
     <div class="dropdown" data-subnav="tetra">
-      <a href="tetra.html" class="dropbtn active">TETRA</a>
+      <a href="index.html" class="dropbtn active">TETRA</a>
       <div class="dropdown-content">
-        <a href="tetra.html">Übersicht</a>
-        <a href="tetra-frequenz.html">Frequenzerweiterung</a>
-        <a href="tetra-duplex.html">Duplex-Tables</a>
+        <a href="index.html">&Uuml;bersicht</a>
+        <a href="frequenz_erweiterung.html">Frequenzerweiterung</a>
+        <a href="duplex_tables.html">Duplex-Tables</a>
       </div>
     </div>
-    <a href="dmr.html">DMR</a>
-    <a href="logbuch.html">Logbuch</a>
+    <a href="../dmr.html">DMR</a>
+    <a href="../logbuch.html">Logbuch</a>
     <div class="dropdown" data-subnav="diy">
       <a href="#" class="dropbtn">DIY</a>
       <div class="dropdown-content">
-        <a href="blumentopf.html">Blumentopfantenne</a>
-        <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+        <a href="../diy/blumentopf.html">Blumentopfantenne</a>
+        <a href="../diy/programmierkabel-mtm.html">Programmierkabel MTM800E</a>
+        <a href="../diy/programmierkabel-mtp.html">Programmierkabel MTP-Serie</a>
       </div>
     </div>
-    <a href="links.html">Links</a>
+    <a href="../links.html">Links</a>
     <div class="subnav" id="subnav-aktivitaeten">
-      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
-      <a href="aktivitaeten.html">Übersicht</a>
-      <a href="sstv.html">SSTV</a>
-      <a href="qsl-cards.html">QSL-Cards</a>
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zur&uuml;ck</a>
+      <a href="../aktivitaeten/">&Uuml;bersicht</a>
+      <a href="../aktivitaeten/sstv.html">SSTV</a>
+      <a href="../aktivitaeten/qsl-cards.html">QSL-Cards</a>
     </div>
     <div class="subnav" id="subnav-tetra">
-      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
-      <a href="tetra.html">Übersicht</a>
-      <a href="tetra-frequenz.html">Frequenzerweiterung</a>
-      <a href="tetra-duplex.html">Duplex-Tables</a>
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zur&uuml;ck</a>
+      <a href="index.html">&Uuml;bersicht</a>
+      <a href="frequenz_erweiterung.html">Frequenzerweiterung</a>
+      <a href="duplex_tables.html">Duplex-Tables</a>
     </div>
     <div class="subnav" id="subnav-diy">
-      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
-      <a href="blumentopf.html">Blumentopfantenne</a>
-      <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zur&uuml;ck</a>
+      <a href="../diy/blumentopf.html">Blumentopfantenne</a>
+      <a href="../diy/programmierkabel-mtm.html">Programmierkabel MTM800E</a>
+      <a href="../diy/programmierkabel-mtp.html">Programmierkabel MTP-Serie</a>
     </div>
   </nav>
 </header>
@@ -87,60 +89,60 @@
       <li>
         <strong>Codeplug &ouml;ffnen</strong> &ndash; CPS starten und den vorhandenen Codeplug
         laden oder aus dem Ger&auml;t auslesen.
-        <img src="bilder/tmo_extension/step1.png" alt="Codeplug in CPS ge&ouml;ffnet"
-             class="lb-img"
+        <img src="../media/tmo_extension/step1.png" alt="Codeplug in CPS ge&ouml;ffnet"
+             class="lb-img">
       </li>
       <li>
-        <strong>Lab-Mode &ouml;ffnen</strong> &ndash; ÃƒÅ“ber das Men&uuml; <em>View Ã¢â€ â€™ Lab Mode</em>
+        <strong>Lab-Mode &ouml;ffnen</strong> &ndash; &uuml;ber das Men&uuml; <em>View &rightarrow; Lab Mode</em>
         oder per Tastenk&uuml;rzel den Lab-Mode aktivieren.
-        <img src="bilder/tmo_extension/step2.png" alt="Lab-Mode aktivieren"
-             class="lb-img"
+        <img src="../media/tmo_extension/step2.png" alt="Lab-Mode aktivieren"
+             class="lb-img">
       </li>
       <li>
         <strong>Auf Dezimal umschalten</strong> &ndash; Im Lab-Mode die Anzeige von
         Hexadezimal auf Dezimal umstellen.
-        <img src="bilder/tmo_extension/step3.png" alt="Dezimalansicht"
-             class="lb-img"
+        <img src="../media/tmo_extension/step3.png" alt="Dezimalansicht"
+             class="lb-img">
       </li>
       <li>
-        <strong>Block Ã¢â‚¬Å¾cp_net_block&ldquo; erweitern</strong> &ndash; In der Baumstruktur
+        <strong>Block &rdquo;cp_net_block&ldquo; erweitern</strong> &ndash; In der Baumstruktur
         den Block <em>cp_net_block</em> aufklappen.
       </li>
       <li>
-        <strong>Block Ã¢â‚¬Å¾net_data&ldquo; erweitern</strong> &ndash; Unter <em>cp_net_block</em>
+        <strong>Block &rdquo;net_data&ldquo; erweitern</strong> &ndash; Unter <em>cp_net_block</em>
         den Block <em>net_data</em> aufklappen.
       </li>
       <li>
-        <strong>Block Ã¢â‚¬Å¾TMO_range_table[]&ldquo; erweitern</strong> &ndash; Unter
+        <strong>Block &rdquo;TMO_range_table[]&ldquo; erweitern</strong> &ndash; Unter
         <em>net_data</em> den Block <em>TMO_range_table[]</em> aufklappen.
       </li>
       <li>
         <strong>max_rx_freq anpassen</strong> &ndash; Bei jedem der 16 Eintr&auml;ge unter
         <em>TMO_range_table[]</em> den Wert <code>max_rx_freq</code> von
         <strong>430000000</strong> auf <strong>440000000</strong> &auml;ndern.
-        <img src="bilder/tmo_extension/step7.png" alt="max_rx_freq auf 440000000"
-             class="lb-img"
+        <img src="../media/tmo_extension/step7.png" alt="max_rx_freq auf 440000000"
+             class="lb-img">
       </li>
       <li>
         <strong>DMO-Range anpassen</strong> &ndash; Den Block <em>DMO_range</em> aufsuchen
         und ebenfalls <strong>430000000</strong> durch <strong>440000000</strong>
         ersetzen.
-        <img src="bilder/tmo_extension/step8.png" alt="DMO_range anpassen"
-             class="lb-img"
+        <img src="../media/tmo_extension/step8.png" alt="DMO_range anpassen"
+             class="lb-img">
       </li>
       <li>
-        <strong>Lab-Mode verlassen</strong> &ndash; ÃƒÅ“ber <em>View Ã¢â€ â€™ Lab Mode</em> den
-        Lab-Mode wieder deaktivieren. Dadurch werden die Ãƒ„nderungen validiert und
+        <strong>Lab-Mode verlassen</strong> &ndash; &uuml;ber <em>View &rightarrow; Lab Mode</em> den
+        Lab-Mode wieder deaktivieren. Dadurch werden die &auml;nderungen validiert und
         gespeichert.
-        <img src="bilder/tmo_extension/step9.png" alt="Lab-Mode verlassen"
-             class="lb-img"
+        <img src="../media/tmo_extension/step9.png" alt="Lab-Mode verlassen"
+             class="lb-img">
       </li>
       <li>
         <strong>Write Entire Codeplug</strong> &ndash; Den vollst&auml;ndigen Codeplug ins Ger&auml;t
         schreiben. <em>Write Codeplug</em> reicht nicht &ndash; nur <em>Write Entire
         Codeplug</em> &uuml;bertr&auml;gt die Range-Tables.
-        <img src="bilder/tmo_extension/step10.png" alt="Write Entire Codeplug"
-             class="lb-img"
+        <img src="../media/tmo_extension/step10.png" alt="Write Entire Codeplug"
+             class="lb-img">
       </li>
     </ol>
   </section>
@@ -163,6 +165,7 @@
 
 <div class="lightbox-overlay" id="lightbox">
   <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span class="lightbox-download" onclick="downloadImage()" title="Bild herunterladen">&DownArrowBar;</span>
   <span class="lightbox-nav lightbox-prev" onclick="prevImage()">&#10094;</span>
   <span class="lightbox-nav lightbox-next" onclick="nextImage()">&#10095;</span>
   <img class="lightbox-img" id="lightbox-img" alt="">
@@ -170,7 +173,7 @@
   <div class="lightbox-counter" id="lightbox-counter"></div>
 </div>
 
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>
 

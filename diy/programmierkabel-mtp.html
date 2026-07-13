@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programmierkabel MTP-Serie &ndash; DN9PHI</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="../media/logo.png" alt="DN9PHI Logo">
+    <div>
+      <h1>DN9PHI <small>Amateurfunk</small></h1>
+    </div>
+  </div>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Men&uuml;">
+    <span></span><span></span><span></span>
+  </button>
+  <nav>
+    <a href="../index.html">Start</a>
+    <a href="../ueber-mich.html">&Uuml;ber mich</a>
+    <div class="dropdown" data-subnav="aktivitaeten">
+      <a href="../aktivitaeten/" class="dropbtn">Aktivit&auml;ten</a>
+      <div class="dropdown-content">
+        <a href="../aktivitaeten/sstv.html">SSTV</a>
+        <a href="../aktivitaeten/qsl-cards.html">QSL-Cards</a>
+      </div>
+    </div>
+    <div class="dropdown" data-subnav="tetra">
+      <a href="../tetra/" class="dropbtn">TETRA</a>
+      <div class="dropdown-content">
+        <a href="../tetra/">&Uuml;bersicht</a>
+        <a href="../tetra/frequenz_erweiterung.html">Frequenzerweiterung</a>
+        <a href="../tetra/duplex_tables.html">Duplex-Tables</a>
+      </div>
+    </div>
+    <a href="../dmr.html">DMR</a>
+    <a href="../logbuch.html">Logbuch</a>
+    <div class="dropdown" data-subnav="diy">
+      <a href="#" class="dropbtn active">DIY</a>
+      <div class="dropdown-content">
+        <a href="blumentopf.html">Blumentopfantenne</a>
+        <a href="programmierkabel-mtm.html">Programmierkabel MTM800E</a>
+        <a href="programmierkabel-mtp.html" class="active">Programmierkabel MTP-Serie</a>
+      </div>
+    </div>
+    <a href="../links.html">Links</a>
+    <div class="subnav" id="subnav-aktivitaeten">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zur&uuml;ck</a>
+      <a href="../aktivitaeten/">&Uuml;bersicht</a>
+      <a href="../aktivitaeten/sstv.html">SSTV</a>
+      <a href="../aktivitaeten/qsl-cards.html">QSL-Cards</a>
+    </div>
+    <div class="subnav" id="subnav-tetra">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zur&uuml;ck</a>
+      <a href="../tetra/">&Uuml;bersicht</a>
+      <a href="../tetra/frequenz_erweiterung.html">Frequenzerweiterung</a>
+      <a href="../tetra/duplex_tables.html">Duplex-Tables</a>
+    </div>
+    <div class="subnav" id="subnav-diy">
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zur&uuml;ck</a>
+      <a href="blumentopf.html">Blumentopfantenne</a>
+      <a href="programmierkabel-mtm.html">Programmierkabel MTM800E</a>
+      <a href="programmierkabel-mtp.html" class="active">Programmierkabel MTP-Serie</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Programmierkabel f&uuml;r MTP3000-, MTP6000-, MTP8500- und MXP600-Serie herstellen</h2>
+    <p>
+      Die Motorola MTP3000-, MTP6000-, MTP8500- und MXP600-Serien werden &uuml;ber den
+      Bottom Connector am Fu&szlig; des Ger&auml;ts programmiert. Mit einem USB-Seriell-Adapter
+      und etwas L&ouml;tarbeit l&auml;sst sich ein Programmierkabel einfach selbst bauen.
+    </p>
+  </section>
+
+  <section>
+    <h2>Pinbelegung</h2>
+    <div class="data-table-container">
+      <table class="data-table">
+        <tr><th>Pin</th><th>Signal</th><th>BTB-Stecker (J1200)</th></tr>
+        <tr><td>1</td><td>USB_DP_TXD</td><td>11</td></tr>
+        <tr><td>2</td><td>USB_5V</td><td>14</td></tr>
+        <tr><td>3</td><td>OPT2</td><td>22</td></tr>
+        <tr><td>4</td><td>OPT1</td><td>24</td></tr>
+        <tr><td>5, 9, 14</td><td>GND</td><td>1, 3, 5, 7, 9, 15, 17, 19, 20, 21, 23, 25, 27, 29, 30</td></tr>
+        <tr><td>6</td><td>USB_DM_RXD</td><td>13</td></tr>
+        <tr><td>7</td><td>SWB+_SUPPLY</td><td>26, 28</td></tr>
+        <tr><td>12</td><td>EXTB+</td><td>2, 4, 6, 8, 10</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ansteuerung der Pins am Bottom Connector</h2>
+    <p>
+      &Uuml;ber die beiden OPT-Pins wird dem Funkger&auml;t mitgeteilt, welches Zubeh&ouml;r
+      angeschlossen ist. Als Bastler legst du die Pegel einfach &uuml;ber Br&uuml;cken
+      auf GND fest:
+    </p>
+    <div class="data-table-container">
+      <table class="data-table">
+        <tr><th>Verwendungszweck</th><th>Modus</th><th>USB</th><th>OPT1 (Pin 4)</th><th>OPT2 (Pin 3)</th></tr>
+        <tr><td>Kein Zubeh&ouml;r</td><td>&ndash;</td><td>&ndash;</td><td>1 (offen)</td><td>1 (offen)</td></tr>
+        <tr><td>Boot (Factory)</td><td>UART</td><td>&ndash;</td><td>egal</td><td>egal</td></tr>
+        <tr><td>AIE Keyload</td><td>UART</td><td>&ndash;</td><td>0 (GND)</td><td>0 (GND)</td></tr>
+        <tr><td>IMT (Integrierter Messtest)</td><td>UART</td><td>&ndash;</td><td>0 (GND)</td><td>0 (GND)</td></tr>
+        <tr><td>ITM</td><td>USB</td><td>Device</td><td>1 (offen)</td><td>0 (GND)</td></tr>
+        <tr><td>USB-Ladeger&auml;t (Travel Charge)</td><td>USB</td><td>Device</td><td>1 (offen)</td><td>0 (GND)</td></tr>
+        <tr><td><strong>Programmierbetrieb</strong></td><td>USB</td><td>Host</td><td>1 (offen)</td><td>0 (GND)</td></tr>
+        <tr><td>Ein weiteres MTP-Ger&auml;t</td><td>USB</td><td>Host/Device</td><td>1 (offen)</td><td>0 (GND)</td></tr>
+        <tr><td><strong>Spannungsversorgung (fest)</strong></td><td>PS charger-USB</td><td>Device</td><td>0 (GND)</td><td>1 (offen)</td></tr>
+        <tr><td>TC/VPA (Ladeger&auml;t)</td><td>PS charger-USB</td><td>Device</td><td>0 (GND)</td><td>1 (offen)</td></tr>
+        <tr><td>DUC (Dual-Unit Charger)</td><td>PS charger-USB</td><td>Device</td><td>0 (GND)</td><td>1 (offen)</td></tr>
+        <tr><td>MUC (Multi-Unit Charger)</td><td>PS charger-USB</td><td>Device</td><td>0 (GND)</td><td>1 (offen)</td></tr>
+        <tr><td>Car Kit (Fahrzeughalterung)</td><td>PS charger-USB</td><td>Device</td><td>0 (GND)</td><td>1 (offen)</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ben&ouml;tigte Materialien</h2>
+    <ul>
+      <li>USB-A-auf-B-Kabel (g&auml;ngiges Drucker-/Scannerkabel)</li>
+      <li>Passender Stecker f&uuml;r den Bottom Connector oder Female-Jumper-Wires</li>
+      <li>L&ouml;tkolben, L&ouml;tzinn, Schrumpfschlauch</li>
+    </ul>
+    <img src="../media/programmierkabel-mtp3000_mtp6000_mtp8500_mxp600/connector.png" alt="Bottom Connector" class="lb-img" style="max-width:320px;width:100%;height:auto;cursor:pointer;display:block;margin:0.5rem 0;border:1px solid #1e3a5f;border-radius:4px;">
+  </section>
+
+  <section>
+    <h2>Bauanleitung</h2>
+    <ol class="guide-steps">
+      <li>
+        <strong>USB-Stecker abtrennen</strong> &ndash; Den USB-B-Stecker des Kabels
+        abkneifen, sodass die Adern frei liegen.
+      </li>
+      <li>
+        <strong>Kabel vorbereiten</strong> &ndash; Isoliere die vier Adern des USB-Kabels
+        ab (VCC, GND, D+, D-). Die USB-Belegung ist:
+        <div class="data-table-container">
+          <table class="data-table" style="margin:0.5rem 0;">
+            <tr><th>Farbe (typ.)</th><th>Signal</th></tr>
+            <tr><td>Rot</td><td>VCC (5V)</td></tr>
+            <tr><td>Wei&szlig;</td><td>D-</td></tr>
+            <tr><td>Gr&uuml;n</td><td>D+</td></tr>
+            <tr><td>Schwarz</td><td>GND</td></tr>
+          </table>
+        </div>
+      </li>
+      <li>
+        <strong>Programmierbetrieb &ndash; Br&uuml;cken setzen</strong> &ndash;
+        Damit das Funkger&auml;t in den Programmiermodus wechselt, muss
+        OPT2 (Pin 3) auf Low (GND) gelegt werden. Lege dazu eine Br&uuml;cke
+        zwischen Pin 3 und Pin 9 (GND) an und halte danach die Tasten "1", "9"
+        und "Power" gedrückt, bis du den Programmiermodus siehst.
+      </li>
+      <li>
+        <strong>Verbinden</strong> &ndash; L&ouml;te die USB-Adern an die
+        entsprechenden Pins des Bottom Connectors:
+        <div class="data-table-container">
+          <table class="data-table" style="margin:0.5rem 0;">
+            <tr><th>USB-Ader</th><th>Bottom Connector Pin</th><th>Signal</th></tr>
+            <tr><td>GND (Schwarz)</td><td>5, 9, 14</td><td>GND</td></tr>
+            <tr><td>D+ (Gr&uuml;n)</td><td>1</td><td>USB_DP / TXD</td></tr>
+            <tr><td>D- (Wei&szlig;)</td><td>6</td><td>USB_DM / RXD</td></tr>
+          </table>
+        </div>
+        <p style="font-size:0.85rem;color:#6c8eb0;margin-top:0.5rem;">
+          <strong>Hinweis:</strong> VCC (Rot) wird im Programmierbetrieb nicht ben&ouml;tigt.
+          Isoliere diese Ader und lege sie zur Seite.
+        </p>
+      </li>
+      <li>
+        <strong>Kabel testen</strong> &ndash; Mit einem Multimeter die Durchg&auml;ngigkeit
+        aller Verbindungen pr&uuml;fen.
+      </li>
+      <li>
+        <strong>Schrumpfschlauch anbringen</strong> &ndash; Alle L&ouml;tstellen mit
+        Schrumpfschlauch isolieren.
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Laden des Ger&auml;tes</h2>
+    <p>
+      Zum Laden des Ger&auml;ts &uuml;ber das Kabel wird eine andere
+      Beschaltung ben&ouml;tigt:
+    </p>
+    <ul>
+      <li>Br&uuml;cke zwischen Pin 4 (OPT1) und Pin 9 (GND)</li>
+      <li>5V Gleichspannung (max. 1A) an Pin 12 (EXTB+) anlegen</li>
+      <li>GND an Pin 5 oder 14 anschlie&szlig;en</li>
+    </ul>
+  </section>
+
+  <section>
+    <p style="font-size:0.85rem;color:#6c8eb0;">
+      <strong>Hinweis:</strong> Anleitung &amp; Pinout basieren auf dem Originalartikel von
+      <a href="https://www.hamtetra.com/motorola-mtp6650/" target="_blank">HamTetra Network</a>
+      und dem <a href="https://www.hamtetra.com/how-to-build-a-motorola-mtm800-mtm800e-programming-cable/" target="_blank">MTM-Programmierkabel-Guide</a>.
+    </p>
+    <p style="font-size:0.85rem;color:#6c8eb0;">
+      <strong>Wichtiger Hinweis:</strong> Ich &uuml;bernehme keine Haftung f&uuml;r
+      eventuelle Sch&auml;den an deinem Funkger&auml;t oder Programmierkabel.
+      Alle Angaben ohne Gew&auml;hr. Bau und Nutzung erfolgen auf eigene Gefahr.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    DN9PHI &middot; <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
+    Ortsverband <a href="https://darc.de/g11/" target="_blank">G11 Leverkusen</a>
+  </p>
+  <p>Diese Seite dient ausschlie&szlig;lich dem nicht-kommerziellen Hobby Amateurfunk.</p>
+  <p style="font-size:0.8rem;color:#6c8eb0;">
+    Gehostet auf Infrastruktur des
+    <a href="https://www.darc.de/home/" target="_blank">DARC e.V.</a> &middot;
+    <a href="https://www.darc.de/impressum/" target="_blank">Impressum</a>
+    &middot;
+    <a href="https://www.darc.de/datenschutzerklaerung/" target="_blank">Datenschutzerkl&auml;rung</a>
+  </p>
+</footer>
+
+<div class="lightbox-overlay" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span class="lightbox-download" onclick="downloadImage()" title="Bild herunterladen">&DownArrowBar;</span>
+  <span class="lightbox-nav lightbox-prev" onclick="prevImage()">&#10094;</span>
+  <span class="lightbox-nav lightbox-next" onclick="nextImage()">&#10095;</span>
+  <img class="lightbox-img" id="lightbox-img" alt="">
+  <div class="lightbox-filename" id="lightbox-filename"></div>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script src="../script.js"></script>
+</body>
+</html>

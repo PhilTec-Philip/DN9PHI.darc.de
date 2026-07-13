@@ -26,6 +26,17 @@ function openLightbox(idx) {
   document.body.style.overflow = 'hidden';
 }
 
+function downloadImage() {
+  const src = lightboxImgs[currentIdx].src;
+  const name = lightboxImgs[currentIdx].name;
+  const a = document.createElement('a');
+  a.href = src;
+  a.download = name;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('show');
   document.body.style.overflow = '';

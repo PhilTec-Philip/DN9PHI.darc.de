@@ -9,7 +9,7 @@ Private Hobby-Website von **DN9PHI**.
 - Stationsvorstellung (Xiegu G90, TETRA, DMR etc.)
 - TETRA & CPS-Anleitungen (Frequenzerweiterung, Duplex-Tables)
 - SSTV-Galerie, QSL-Cards
-- DMR-Geräte
+- DMR-Ger&auml;te
 - Antennenbauanleitung nach VK2ZOI (RIP)
 - DIY-Dokumentationen
 - Logbuch-Links, Link-Sammlung

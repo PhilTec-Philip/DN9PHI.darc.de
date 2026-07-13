@@ -10,7 +10,7 @@
 
 <header>
   <div class="header-left">
-    <img src="bilder/logo.png" alt="DN9PHI Logo">
+    <img src="media/logo.png" alt="DN9PHI Logo">
     <div>
       <h1>DN9PHI <small>Amateurfunk</small></h1>
     </div>
@@ -20,20 +20,20 @@
   </button>
     <nav>
     <a href="index.html" class="active">Start</a>
-    <a href="ueber-mich.html">Über mich</a>
+    <a href="ueber-mich.html">&Uuml;ber mich</a>
     <div class="dropdown" data-subnav="aktivitaeten">
-      <a href="aktivitaeten.html" class="dropbtn">Aktivitäten</a>
+      <a href="aktivitaeten/" class="dropbtn">Aktivit&auml;ten</a>
       <div class="dropdown-content">
-        <a href="sstv.html">SSTV</a>
-        <a href="qsl-cards.html">QSL-Cards</a>
+        <a href="aktivitaeten/sstv.html">SSTV</a>
+        <a href="aktivitaeten/qsl-cards.html">QSL-Cards</a>
       </div>
     </div>
     <div class="dropdown" data-subnav="tetra">
-      <a href="tetra.html" class="dropbtn">TETRA</a>
+      <a href="tetra/" class="dropbtn">TETRA</a>
       <div class="dropdown-content">
-        <a href="tetra.html">Übersicht</a>
-        <a href="tetra-frequenz.html">Frequenzerweiterung</a>
-        <a href="tetra-duplex.html">Duplex-Tables</a>
+        <a href="tetra/">&Uuml;bersicht</a>
+        <a href="tetra/frequenz_erweiterung.html">Frequenzerweiterung</a>
+        <a href="tetra/duplex_tables.html">Duplex-Tables</a>
       </div>
     </div>
     <a href="dmr.html">DMR</a>
@@ -41,27 +41,29 @@
     <div class="dropdown" data-subnav="diy">
       <a href="#" class="dropbtn">DIY</a>
       <div class="dropdown-content">
-        <a href="blumentopf.html">Blumentopfantenne</a>
-        <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+        <a href="diy/blumentopf.html">Blumentopfantenne</a>
+        <a href="diy/programmierkabel-mtm.html">Programmierkabel MTM800E</a>
+        <a href="diy/programmierkabel-mtp.html">Programmierkabel MTP-Serie</a>
       </div>
     </div>
     <a href="links.html">Links</a>
     <div class="subnav" id="subnav-aktivitaeten">
-      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
-      <a href="aktivitaeten.html">Übersicht</a>
-      <a href="sstv.html">SSTV</a>
-      <a href="qsl-cards.html">QSL-Cards</a>
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zur&uuml;ck</a>
+      <a href="aktivitaeten/">&Uuml;bersicht</a>
+      <a href="aktivitaeten/sstv.html">SSTV</a>
+      <a href="aktivitaeten/qsl-cards.html">QSL-Cards</a>
     </div>
     <div class="subnav" id="subnav-tetra">
-      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
-      <a href="tetra.html">Übersicht</a>
-      <a href="tetra-frequenz.html">Frequenzerweiterung</a>
-      <a href="tetra-duplex.html">Duplex-Tables</a>
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zur&uuml;ck</a>
+      <a href="tetra/">&Uuml;bersicht</a>
+      <a href="tetra/frequenz_erweiterung.html">Frequenzerweiterung</a>
+      <a href="tetra/duplex_tables.html">Duplex-Tables</a>
     </div>
     <div class="subnav" id="subnav-diy">
-      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zurück</a>
-      <a href="blumentopf.html">Blumentopfantenne</a>
-      <a href="programmierkabel.html">Programmierkabel MTM800E</a>
+      <a href="#" class="subnav-back" onclick="hideSubnav();return false;">Zur&uuml;ck</a>
+      <a href="diy/blumentopf.html">Blumentopfantenne</a>
+      <a href="diy/programmierkabel-mtm.html">Programmierkabel MTM800E</a>
+      <a href="diy/programmierkabel-mtp.html">Programmierkabel MTP-Serie</a>
     </div>
   </nav>
 </header>
@@ -89,16 +91,32 @@
     </p>
   </section>
 
+  <section>
+    <h2>Neueste Aktivit&auml;ten</h2>
+    <div class="activity-preview">
+      <div class="activity-preview-item">
+        <p class="meta">13. Juli 2026</p>
+        <p><strong>Motorola MTP6650 ist da!</strong> &ndash; Nachdem ich mein MTP850S verkauft habe, ist heute endlich mein MTP6650 angekommen.</p>
+        <p><a href="aktivitaeten/">&rarr; Mehr erfahren</a></p>
+      </div>
+      <div class="activity-preview-item">
+        <p class="meta">12. Juli 2026</p>
+        <p><strong>DM1PWN jetzt auch auf TETRA</strong> &ndash; Mein Vater hat sich ein Motorola MTP3550 zugelegt &ndash; jetzt sind wir beide auf TETRA aktiv.</p>
+        <p><a href="aktivitaeten/">&rarr; Mehr erfahren</a></p>
+      </div>
+    </div>
+  </section>
+
   <div class="grid-2">
     <section>
-      <h2>ÃƒÅ“ber mich</h2>
+      <h2>&Uuml;ber mich</h2>
       <p>Meine Station, mein Equipment und alle Details zu meiner Funklizenz.</p>
       <p><a href="ueber-mich.html">&rarr; Mehr erfahren</a></p>
     </section>
     <section>
       <h2>Aktivit&auml;ten</h2>
       <p>YOTA Month, Lange Nacht der Technik an der TH K&ouml;ln, Jugendgruppe am WHG, Notfunk&uuml;bungen, Mesh und mehr.</p>
-      <p><a href="aktivitaeten.html">&rarr; Zu den Aktivit&auml;ten</a></p>
+      <p><a href="aktivitaeten/">&rarr; Zu den Aktivit&auml;ten</a></p>
     </section>
   </div>
 </main>
