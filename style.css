@@ -118,7 +118,7 @@ header {
   width: 0%;
   height: 3px;
   background: var(--progress-bg);
-  z-index: 1001;
+  z-index: 1;
   pointer-events: none;
   transition: width 0.05s linear;
 }
@@ -875,6 +875,48 @@ footer a:hover {
   margin-top: 2px;
 }
 
+.balloon-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.balloon-gallery .panel {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  background: var(--bg-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.balloon-gallery .panel:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px var(--shadow-lg);
+  border-color: var(--accent);
+}
+
+.balloon-gallery .panel h3 {
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+  color: var(--text-heading);
+  font-weight: 600;
+}
+
+.balloon-gallery .panel .images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.balloon-gallery .panel .images p {
+  color: var(--text-muted);
+  font-style: italic;
+  width: 100%;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: row;
@@ -1053,6 +1095,9 @@ footer a:hover {
   .lightbox-prev { left: 0.5rem; }
   .lightbox-next { right: 0.5rem; }
 
+  .balloon-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {

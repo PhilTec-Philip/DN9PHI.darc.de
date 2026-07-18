@@ -148,8 +148,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function warningPath() {
-    var depth = location.pathname.split('/').filter(Boolean).length - 1;
-    return (depth ? '../'.repeat(depth) : '') + 'media/warning.svg';
+    const depth = location.pathname.split('/').filter(Boolean).length - 1;
+    const base = (depth ? '../'.repeat(depth) : '') + 'media/';
+    const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return base + (dark ? 'warning-dark.svg' : 'warning-light.svg');
   }
   document.querySelectorAll('main img:not(.hero-canvas)').forEach(function(img) {
     img.loading = 'lazy';

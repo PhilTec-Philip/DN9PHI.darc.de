@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <style>
+    @media {
+      .bg { fill: #eef2f7; }
+      .ibg { fill: #fce4e4; }
+      .istroke { stroke: #c62828; }
+      .itxt { fill: #c62828; }
+      .mtxt { fill: #555; }
+      .stxt { fill: #888; }
+    }
+  </style>
+  <rect class="bg" width="400" height="300" rx="6"/>
+  <circle class="ibg" cx="200" cy="125" r="100"/>
+  <circle cx="200" cy="125" r="80" fill="none" class="istroke" stroke-width="4"/>
+  <text class="itxt" x="200" y="160" text-anchor="middle" font-family="sans-serif" font-size="96" font-weight="bold">!</text>
+  <text class="mtxt" x="200" y="265" text-anchor="middle" font-family="sans-serif" font-size="28">Bild nicht gefunden</text>
+</svg>
